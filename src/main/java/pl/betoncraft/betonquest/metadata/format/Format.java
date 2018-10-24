@@ -30,12 +30,57 @@ public interface Format extends Serializable {
      * Type of the Format.
      */
     public enum Type {
-        ARGUMENT_LIST
+        ARGUMENT_LIST, MESSAGE_MAP, MESSAGE_LIST, INSTRUCTION_LIST,
     }
 
     /**
      * @return the Format's type.
      */
     public Type getType();
+
+    /**
+     * Argument-based format of the instruction string. Choose this format if your
+     * instruction string consists of arguments separated by spaces (or dots in case
+     * of a variable). Required arguments come first in a specified order, optional
+     * arguments come next and are prefixed with their name.
+     *
+     * @return ArgumentFormat instance
+     */
+    public static ArgumentFormat argument() {
+        return new ArgumentFormat();
+    }
+
+    /**
+     * MessageMap format is a format where instruction string is taken literally as
+     * a message. It is separated into a map of messages by inserting `{key}`
+     * strings between them. This is done for example in the `message` event (which
+     * allows the whole instruction to take a literal form without a key specified).
+     *
+     * @return MessageMapFormat instance
+     */
+    public static MessageMapFormat messageMap() {
+        return new MessageMapFormat();
+    }
+
+    /**
+     * MessageList format allows specifying a list of literal messages separated by
+     * a string. An example is the `command` event which has a list of commands
+     * separated by the `|` character.
+     *
+     * @return MessageListFormat instance
+     */
+    public static MessageListFormat messageList(String separator) {
+        return new MessageListFormat(separator);
+    }
+
+    /**
+     * InstuctionList is a list of instructions, the same as in `run` event and
+     * `check` condition.
+     *
+     * @return InstructionListFormat instance
+     */
+    public static InstructionListFormat instructionList() {
+        return new InstructionListFormat();
+    }
 
 }
