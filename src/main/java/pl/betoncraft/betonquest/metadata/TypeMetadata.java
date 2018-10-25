@@ -40,6 +40,11 @@ public interface TypeMetadata extends Serializable {
     public Optional<Text> getDescription();
 
     /**
+     * @return the name of the plugin which registered the type.
+     */
+    public Optional<String> getPlugin();
+
+    /**
      * @return the type's format specification
      */
     public Optional<Format> getFormat();

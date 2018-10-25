@@ -109,6 +109,7 @@ public class MessageEvent extends QuestEvent {
 		return new DefaultTypeMetadata()
 		        .setName(new StringText("Message"))
 		        .setDescription(new StringText("Sends a message to the player"))
+				.setPlugin(BetonQuest.getInstance())
 		        .setFormat(Format.messageMap().setAllowLiteralForm());
 	}
 

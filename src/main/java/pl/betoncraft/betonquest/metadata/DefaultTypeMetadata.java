@@ -21,6 +21,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 import pl.betoncraft.betonquest.metadata.format.Format;
 import pl.betoncraft.betonquest.metadata.text.Text;
 
@@ -34,6 +36,7 @@ public class DefaultTypeMetadata implements TypeMetadata {
     protected Optional<Text> name = Optional.empty();
     protected Optional<Text> desc = Optional.empty();
     protected Optional<Format> fmt = Optional.empty();
+    protected Optional<String> plugin = Optional.empty();
 
     /**
      * @param name Text containing the name of the type
@@ -50,6 +53,15 @@ public class DefaultTypeMetadata implements TypeMetadata {
      */
     public DefaultTypeMetadata setDescription(Text description) {
         this.desc = Optional.of(description);
+        return this;
+    }
+
+    /**
+     * @param plugin the name of the plugin which registered the type
+     * @return this object
+     */
+    public DefaultTypeMetadata setPlugin(JavaPlugin plugin) {
+        this.plugin = Optional.of(plugin.getName());
         return this;
     }
 
@@ -73,6 +85,11 @@ public class DefaultTypeMetadata implements TypeMetadata {
     }
 
     @Override
+    public Optional<String> getPlugin() {
+        return plugin;
+    }
+
+    @Override
     public Optional<Format> getFormat() {
         return fmt;
     }
@@ -83,6 +100,7 @@ public class DefaultTypeMetadata implements TypeMetadata {
 
         name.ifPresent(value -> result.put("name", value.serialize()));
         desc.ifPresent(value -> result.put("description", value.serialize()));
+        plugin.ifPresent(value -> result.put("plugin", value));
         fmt.ifPresent(value -> {
             result.put("type", value.getType().toString().toLowerCase());
             result.put("format", value.serialize());

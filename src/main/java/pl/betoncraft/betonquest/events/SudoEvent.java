@@ -19,6 +19,7 @@ package pl.betoncraft.betonquest.events;
 
 import org.bukkit.entity.Player;
 
+import pl.betoncraft.betonquest.BetonQuest;
 import pl.betoncraft.betonquest.Instruction;
 import pl.betoncraft.betonquest.InstructionParseException;
 import pl.betoncraft.betonquest.api.QuestEvent;
@@ -58,6 +59,7 @@ public class SudoEvent extends QuestEvent {
 		return new DefaultTypeMetadata()
 		        .setName(new StringText("Sudo"))
 		        .setDescription(new StringText("Executes commands as the player"))
+				.setPlugin(BetonQuest.getInstance())
 		        .setFormat(Format.messageList("|"));
 	}
 

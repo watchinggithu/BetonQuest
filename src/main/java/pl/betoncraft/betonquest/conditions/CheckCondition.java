@@ -103,6 +103,7 @@ public class CheckCondition extends Condition {
 		return new DefaultTypeMetadata()
 		        .setName(new StringText("Check"))
 		        .setDescription(new StringText("Checks multiple conditions defined inline"))
+				.setPlugin(BetonQuest.getInstance())
 		        .setFormat(Format.messageList("|"));
 	}
 }

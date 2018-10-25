@@ -17,6 +17,7 @@
  */
 package pl.betoncraft.betonquest.events;
 
+import pl.betoncraft.betonquest.BetonQuest;
 import pl.betoncraft.betonquest.Instruction;
 import pl.betoncraft.betonquest.InstructionParseException;
 import pl.betoncraft.betonquest.QuestRuntimeException;
@@ -53,6 +54,7 @@ public class DamageEvent extends QuestEvent {
 		return new DefaultTypeMetadata()
 			.setName(new StringText("Damage"))
 			.setDescription(new StringText("Damages the player"))
+			.setPlugin(BetonQuest.getInstance())
 			.setFormat(new ArgumentFormat()
 				.require(new Argument()
 					.setName(new StringText("Damage"))
