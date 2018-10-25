@@ -30,12 +30,40 @@ public interface Data extends Serializable {
      * Type of the Data object.
      */
     public enum Type {
-        NUMBER
+        NUMBER, STRING
     }
 
     /**
      * @return the type of this Data.
      */
     public Type getType();
+
+    /**
+     * This data type is a number. You can add constraints, make it accept variables
+     * etc. Use it if you need a simple numeric argument.
+     *
+     * It takes a single argument - a number class. Usually it's enough to pass
+     * `Integer.class` if you need integer values and `Float.class` if you need
+     * decimals.
+     *
+     * @param clazz
+     *                  the class of the number you want to use
+     * @return the NumberData instance
+     */
+    public static <T extends Number> NumberData<T> number(Class<T> clazz) {
+        return new NumberData<>(clazz);
+    }
+
+    /**
+     * This data type is a string. Use it if your argument can be anything the user
+     * enters or if validating this is too complex / requires runtime checks (i.e.
+     * object names from another plugin). Remember to specify the character which
+     * will be replaced with a space!
+     *
+     * @return the StringData instance
+     */
+    public static StringData string() {
+        return new StringData();
+    }
 
 }
