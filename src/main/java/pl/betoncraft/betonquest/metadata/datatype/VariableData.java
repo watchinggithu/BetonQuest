@@ -17,36 +17,36 @@
  */
 package pl.betoncraft.betonquest.metadata.datatype;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
-public class StringData extends VariableData<StringData> {
+/**
+ * Base class for all data types which can be replaced with a variable.
+ *
+ * @param <T> the subclass type (this is important)
+ */
+public abstract class VariableData<T extends VariableData<T>> implements Data {
 
-    protected Optional<Character> spaceCharacter = Optional.empty();
-
-    @Override
-    public Type getType() {
-        return Type.STRING;
-    }
+    protected boolean canBeVariable = false;
 
     /**
-     * @param spaceCharacter
-     *                           an optional character which will be replaced with a
-     *                           space when parsing instructions
+     * Makes this data type accept variables instead of a concrete type.
+     *
      * @return this object
      */
-    public StringData setSpaceCharacter(char spaceCharacter) {
-        this.spaceCharacter = Optional.of(spaceCharacter);
-        return this;
+    @SuppressWarnings("unchecked")
+    public T setCanBeVariable() {
+        canBeVariable = true;
+        return (T) this;
     }
 
     @Override
     public Map<String, Object> serialize() {
-        Map<String, Object> results = super.serialize();
+        Map<String, Object> result = new HashMap<>();
 
-        spaceCharacter.ifPresent(value -> results.put("spaceCharacter", String.valueOf(value)));
+        result.putIfAbsent("variable", canBeVariable);
 
-        return results;
+        return result;
     }
 
 }

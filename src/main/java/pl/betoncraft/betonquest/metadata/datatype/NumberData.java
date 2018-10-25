@@ -18,7 +18,6 @@
 package pl.betoncraft.betonquest.metadata.datatype;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -28,7 +27,7 @@ import java.util.Optional;
  *
  * @author Jakub Sapalski
  */
-public class NumberData<T extends Number> implements Data {
+public class NumberData<T extends Number> extends VariableData<NumberData<T>> {
 
     /**
      * Type of the number.
@@ -43,7 +42,6 @@ public class NumberData<T extends Number> implements Data {
 
     protected Optional<T> min = Optional.empty();
     protected Optional<T> max = Optional.empty();
-    protected boolean canBeVariable = false;
     protected Type type;
 
     /**
@@ -88,22 +86,11 @@ public class NumberData<T extends Number> implements Data {
         return this;
     }
 
-    /**
-     * Makes this Data type accept variables instead of numbers.
-     *
-     * @return this object.
-     */
-    public NumberData<T> setCanBeVariable() {
-        canBeVariable = true;
-        return this;
-    }
-
     @Override
     public Map<String, Object> serialize() {
-        Map<String, Object> result = new HashMap<>();
+        Map<String, Object> result = super.serialize();
 
         result.put("type", type.toString().toLowerCase());
-        result.put("variable", canBeVariable);
         min.ifPresent(value -> result.put("minimum", value));
         max.ifPresent(value -> result.put("maximum", value));
 
