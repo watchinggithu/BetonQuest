@@ -479,6 +479,12 @@ public final class BetonQuest extends JavaPlugin {
 					if (playerData.getConversation() != null)
 						new ConversationResumer(playerID, playerData.getConversation());
 				}
+
+				// TODO remove debug message
+				Map<String, Object> metadata = metadataProvider.serialize();
+				JSONObject object = new JSONObject(metadata);
+				String json = object.toString();
+				System.out.println(json);
 			}
 		});
 
@@ -499,12 +505,6 @@ public final class BetonQuest extends JavaPlugin {
 
 		// done
 		Debug.broadcast("BetonQuest succesfully enabled!");
-
-		// TODO remove debug message
-		Map<String, Object> metadata = metadataProvider.serialize();
-		JSONObject object = new JSONObject(metadata);
-		String json = object.toString();
-		System.out.println(json);
 	}
 
 	/**
