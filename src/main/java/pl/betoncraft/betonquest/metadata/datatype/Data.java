@@ -30,7 +30,7 @@ public interface Data extends Serializable {
      * Type of the Data object.
      */
     public enum Type {
-        NUMBER, STRING
+        NUMBER, STRING, LOCATION
     }
 
     /**
@@ -64,6 +64,17 @@ public interface Data extends Serializable {
      */
     public static StringData string() {
         return new StringData();
+    }
+
+    /**
+     * This data type accepts locations. You should probably enable variables. If
+     * you want your locations to include direction (yaw and pitch), there's a
+     * method for that.
+     *
+     * @return the LocationData instance
+     */
+    public static LocationData location() {
+        return new LocationData();
     }
 
 }

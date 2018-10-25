@@ -18,40 +18,38 @@
 package pl.betoncraft.betonquest.metadata.datatype;
 
 import java.util.Map;
-import java.util.Optional;
 
 /**
- * A simple string based data type.
+ * Data format which accepts location in the Location Format.
  *
  * @author Jakub Sapalski
  */
-public class StringData extends VariableData<StringData> {
+public class LocationData extends VariableData<LocationData> {
 
-    protected Optional<Character> spaceCharacter = Optional.empty();
+    protected boolean canHaveDirection = false;
 
     @Override
     public Type getType() {
-        return Type.STRING;
+        return Type.LOCATION;
     }
 
     /**
-     * @param spaceCharacter
-     *                           an optional character which will be replaced with a
-     *                           space when parsing instructions
+     * Allows adding direction information to the location (yaw and pitch).
+     *
      * @return this object
      */
-    public StringData setSpaceCharacter(char spaceCharacter) {
-        this.spaceCharacter = Optional.of(spaceCharacter);
+    public LocationData allowDirection() {
+        canHaveDirection = true;
         return this;
     }
 
     @Override
     public Map<String, Object> serialize() {
-        Map<String, Object> results = super.serialize();
+        Map<String, Object> result = super.serialize();
 
-        spaceCharacter.ifPresent(value -> results.put("spaceCharacter", String.valueOf(value)));
+        result.put("direction", canHaveDirection);
 
-        return results;
+        return result;
     }
 
 }
