@@ -59,7 +59,7 @@ public class DamageEvent extends QuestEvent {
 				.require(new Argument()
 					.setName(new StringText("Damage"))
 					.setDescription(new StringText("Amount of damage to deal to the player"))
-					.setData(new NumberData<Integer>(Integer.class).setMin(0).setCanBeVariable())));
+					.setData(new NumberData<Integer>(Integer.class).setMin(0).allowVariable())));
 	}
 
 }

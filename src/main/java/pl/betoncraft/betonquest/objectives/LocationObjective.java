@@ -111,11 +111,11 @@ public class LocationObjective extends Objective implements Listener {
 		                .require(new Argument()
 		                        .setName(new StringText("Location"))
 		                        .setDescription(new StringText("Center of the location to reach"))
-		                        .setData(Data.location().setCanBeVariable()))
+		                        .setData(Data.location().allowVariable()))
 		                .require(new Argument()
 		                        .setName(new StringText("Radius"))
 		                        .setDescription(new StringText("How close the player needs to get to the center"))
-		                        .setData(Data.number(Double.class).setCanBeVariable().setMin(0d))));
+		                        .setData(Data.number(Double.class).allowVariable().setMin(0d))));
 	}
 
 }

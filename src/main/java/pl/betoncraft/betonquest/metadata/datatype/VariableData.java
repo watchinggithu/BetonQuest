@@ -35,7 +35,7 @@ public abstract class VariableData<T extends VariableData<T>> implements Data {
      * @return this object
      */
     @SuppressWarnings("unchecked")
-    public T setCanBeVariable() {
+    public T allowVariable() {
         canBeVariable = true;
         return (T) this;
     }
