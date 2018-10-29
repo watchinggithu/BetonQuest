@@ -17,6 +17,8 @@
  */
 package pl.betoncraft.betonquest.metadata;
 
+import java.util.List;
+
 /**
  * Main storage of the type metadata of the plugin.
  *
@@ -25,27 +27,49 @@ package pl.betoncraft.betonquest.metadata;
 public interface MetadataProvider extends Serializable {
 
     /**
-     * @param type name of the type metadata, the same as when registering actual types
-     * @param metadata TypeMetadata instance with type specification
+     * @param type
+     *                     name of the type metadata, the same as when registering
+     *                     actual types
+     * @param metadata
+     *                     TypeMetadata instance with type specification
      */
     public void registerEventMetadata(String type, TypeMetadata metadata);
 
     /**
-     * @param type name of the type metadata, the same as when registering actual types
-     * @param metadata TypeMetadata instance with type specification
+     * @param type
+     *                     name of the type metadata, the same as when registering
+     *                     actual types
+     * @param metadata
+     *                     TypeMetadata instance with type specification
      */
     public void registerConditionMetadata(String type, TypeMetadata metadata);
 
     /**
-     * @param type name of the type metadata, the same as when registering actual types
-     * @param metadata TypeMetadata instance with type specification
+     * @param type
+     *                     name of the type metadata, the same as when registering
+     *                     actual types
+     * @param metadata
+     *                     TypeMetadata instance with type specification
      */
     public void registerObjectiveMetadata(String type, TypeMetadata metadata);
 
     /**
-     * @param type name of the type metadata, the same as when registering actual types
-     * @param metadata TypeMetadata instance with type specification
+     * @param type
+     *                     name of the type metadata, the same as when registering
+     *                     actual types
+     * @param metadata
+     *                     TypeMetadata instance with type specification
      */
     public void registerVariableMetadata(String type, TypeMetadata metadata);
+
+    /**
+     * @param name
+     *                     the name under which this list of variants should be
+     *                     registered. Consecutive adding under the same name will
+     *                     be ignored
+     * @param variants
+     *                     the list of variants to add
+     */
+    public void addVariants(String name, List<String> variants);
 
 }

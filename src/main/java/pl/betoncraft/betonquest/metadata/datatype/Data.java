@@ -17,6 +17,8 @@
  */
 package pl.betoncraft.betonquest.metadata.datatype;
 
+import java.util.List;
+
 import pl.betoncraft.betonquest.metadata.Serializable;
 
 /**
@@ -30,7 +32,7 @@ public interface Data extends Serializable {
      * Type of the Data object.
      */
     public enum Type {
-        NUMBER, STRING, LOCATION
+        NUMBER, STRING, LOCATION, ENUM
     }
 
     /**
@@ -75,6 +77,40 @@ public interface Data extends Serializable {
      */
     public static LocationData location() {
         return new LocationData();
+    }
+
+    /**
+     * This data type accepts an enum. You should use it if the argument will be
+     * directly translated to a Java Enum instance. Otherwise use a version of this
+     * method which accepts a List of Strings. Pass the class of that enum as an
+     * argument.
+     *
+     * @param enum
+     *            the class of an enum
+     *
+     * @return the EnumData instance
+     */
+    public static EnumData variant(Class<?> enuum) {
+        return new EnumData(enuum);
+    }
+
+    /**
+     * This data type accepts a variant from a list. You should use it if the
+     * argument must be one of some specific words. If the list of words are all
+     * values of a Java Enum then you can use a version of this method which accepts
+     * an Enum class. Pass the name of your variant and the list of Strings as
+     * arguments. The name must be unique, or your variants will get overriden by
+     * something else!
+     *
+     * @param name
+     *                     the unique name of this list
+     * @param variants
+     *                     a list of words to choose from
+     *
+     * @return the EnumData instance
+     */
+    public static EnumData variant(String name, List<String> variants) {
+        return new EnumData(name, variants);
     }
 
 }

@@ -17,7 +17,9 @@
  */
 package pl.betoncraft.betonquest.metadata;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import pl.betoncraft.betonquest.BetonQuest;
@@ -37,6 +39,8 @@ public class DefaultMetadataProvider implements MetadataProvider {
     protected Map<String, TypeMetadata> variables = new HashMap<>();
 
     protected TypeMetadata item;
+
+    protected Map<String, List<String>> variants = new HashMap<>();
 
     public DefaultMetadataProvider(BetonQuest instance) {
         this.instance = instance;
@@ -60,6 +64,11 @@ public class DefaultMetadataProvider implements MetadataProvider {
     @Override
     public void registerVariableMetadata(String type, TypeMetadata metadata) {
         variables.put(type, metadata);
+    }
+
+    @Override
+    public void addVariants(String name, List<String> variants) {
+        this.variants.put(name, variants);
     }
 
     @Override
@@ -92,7 +101,7 @@ public class DefaultMetadataProvider implements MetadataProvider {
 
         // TODO add items
 
-        // TODO add enums
+        result.put("enums", variants);
 
         return result;
     }

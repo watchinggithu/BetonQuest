@@ -759,6 +759,15 @@ public final class BetonQuest extends JavaPlugin {
 	}
 
 	/**
+	 * Returns the current MetadataProvider.
+	 *
+	 * @return default MetadataProvider implementation
+	 */
+	public MetadataProvider getMetadataProvider() {
+		return metadataProvider;
+	}
+
+	/**
 	 * Returns the database instance
 	 *
 	 * @return Database instance
