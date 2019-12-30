@@ -395,7 +395,7 @@ Customize how it looks by adding the following lines to custom.yml:
 
 ```YAML
 menu_conv_io:
-  line_length: 60
+  line_length: 50
   refresh_delay: 180
 
   npc_wrap: '&l &r'
