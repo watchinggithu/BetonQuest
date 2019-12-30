@@ -25,6 +25,7 @@ Additions:
   * New 'menu' conversation IO - Requires ProtocolLib. See: https://www.youtube.com/watch?v=Qtn7Dpdf4jw&lc
   * New 'packet' chat interceptor - Requires ProtocolLib.
   * new '/q debug' command - Enable or disable the debug mode
+  * Condition 'wand' can now have an option 'amount'
 Changes:
   * Event 'effect' can have 'ambient', 'hidden' and 'noicon' parameters
   * Event 'effect' has '--ambient' parameter deprecated with a non fatal warning.
