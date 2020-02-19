@@ -293,7 +293,7 @@
 <li><strong>/q give {package.itemID}</strong> - gives you an item defined in the configuration</li>
 <li><strong>/q config {set/add/read} {path} [value]</strong> - sets, adds or reads values from configuration</li>
 <li><strong>/q purge {playerName}</strong> - deletes all player's data from the database</li>
-<li><strong>/q rename {tag/point/objective/entry} {oldName} {newName}</strong> - renames all specified things in the database</li>
+<li><strong>/q rename {tag/point/globalpoint/objective/entry} {oldName} {newName}</strong> - renames all specified things in the database</li>
 <li><strong>/q delete {tag/point/objective/entry} {name}</strong> - deletes all specified things in the database</li>
 <li><strong>/q backup</strong> - creates a backup of configuration files and database</li>
 <li><strong>/q update</strong> - updates the plugin to the newest release available. If you want to update to a development version instead, add <code class="codehilite"><span class="err">--dev</span></code> argument at the end of the command.</li>
@@ -349,7 +349,7 @@
 <p>Path in this command is like an address of the value. Next branches are separated by dots. For example language setting in main configuration has path <code class="codehilite"><span class="err">config.language</span></code>, and a text in "bye" player option in default quest has path <code class="codehilite"><span class="err">default.conversations.innkeeper.player_options.bye.text</span></code></p>
 <p>You can purge specific player with '<code class="codehilite"><span class="err">/q purge Beton</span></code>' command, where Beton is the name of the player. To purge the entire database at once simply change the prefix in <em>config.yml</em> or delete <em>database.db</em> file.</p>
 <p>Delete command ('<code class="codehilite"><span class="err">/q delete</span></code>') allows you to delete from the database every tag, point, objective or journal entry with specified name.</p>
-<p>Rename command ('<code class="codehilite"><span class="err">/q rename</span></code>') allows you to rename every tag, point, objective or journal entry in the database. In case of an objective it will also rename the objective in <em>objectives.yml</em>, so it continues to work correctly.</p>
+<p>Rename command ('<code class="codehilite"><span class="err">/q rename</span></code>') allows you to rename every tag, point, globalpoint, objective or journal entry in the database. In case of an objective it will also rename the objective in <em>objectives.yml</em>, so it continues to work correctly.</p>
 <p>If you want to backup your configuration and database make sure that your server is empty (this process requires all data to be saved to database -&gt; all players offline) and run '<code class="codehilite"><span class="err">/q backup</span></code>' command. You will get a zip file containing all your data, ready to be unzipped for restoring the plugin.</p>
 <p>Update command ('<code class="codehilite"><span class="err">/q update</span></code>') will try to download the newest version of the plugin and save it to the update folder. This folder is then handled by Spigot to update the plugin. If you accidentally use this command but do not wish to update the plugin, you should remove <code class="codehilite"><span class="err">BetonQuest.jar</span></code> file from the <code class="codehilite"><span class="err">plugins/update</span></code> folder before restarting/reloading the server.</p>
 <p>Using '<code class="codehilite"><span class="err">/q create beton</span></code>' command you will create new package named '<code class="codehilite"><span class="err">beton</span></code>'. It will contain the default quest.</p>
@@ -359,7 +359,7 @@
 <div class="md-source-date">
 <small>
                       
-                        Last update: <span class="timeago" datetime="1577506355000" locale="en"></span>
+                        Last update: <span class="timeago" datetime="1577110584000" locale="en"></span>
 </small>
 </div>
 </article>
