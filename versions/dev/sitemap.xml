@@ -12,6 +12,10 @@
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://betonquest.pl/Features/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://betonquest.pl/Learn%20Beton/Welcome/</loc>
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
@@ -24,10 +28,6 @@
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/YAML-for-questers/</loc>
-     <lastmod>2020-06-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://betonquest.pl/Learn%20Beton/Quick-start-tutorial/</loc>
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
@@ -36,15 +36,19 @@
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/Installing-BetonQuest/</loc>
-     <lastmod>2020-06-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/Setting-up-a-local-test-server/</loc>
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/Installing-BetonQuest/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/Setting-up-the-editor/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/YAML-for-questers/</loc>
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
