@@ -9,7 +9,7 @@
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../images/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1, mkdocs-material-5.2.1" name="generator"/>
-<title>Installation and Configuration - BetonQuest - 1.12.0-DEV-21</title>
+<title>Installation and Configuration - BetonQuest - 1.12.0-DEV-22</title>
 <link href="../../assets/stylesheets/main.71dfd922.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.616af814.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -36,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-21" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-21">
+<a aria-label="BetonQuest - 1.12.0-DEV-22" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-22">
 <img alt="logo" src="../../images/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -45,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-21
+            BetonQuest - 1.12.0-DEV-22
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -133,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-21" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-21">
+<a aria-label="BetonQuest - 1.12.0-DEV-22" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-22">
 <img alt="logo" src="../../images/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-21
+    BetonQuest - 1.12.0-DEV-22
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest" title="Go to repository">
@@ -501,16 +501,45 @@
 <ul>
 <li>Configure MySQL or SQLite database. Fill it to use MySQL or leave it blank (or incorrect) to use SQLite.</li>
 <li>Language is just the currently used translation of the plugin. Currently there are 7 languages available: English (en), Polish (pl), German (de), French (fr), Spanish (es), Chinese (cn), Dutch (nl) and Italian (it).</li>
-<li><code>update</code> section controls the updater. It has the following settings:<ul>
-<li><code>enable</code> option is set to true by default, and it controls whether the plugin should do anything update-related.</li>
-<li><code>download_bugfixes</code> controls whether BetonQuest should automatically update bugfix versions (like <em>1.7.3 -&gt; 1.7.4</em> or <em>1.8.1 -&gt; 1.8.3</em>).
-    These versions <strong>do not</strong> change how the plugin works, they only fix bugs, so it is helpful to set it to <code>true</code>.</li>
-<li><code>notify_new_release</code> option is responsible for displaying a notification at startup about new releases (like <em>1.7.6 -&gt; 1.8</em>).
-    This will inform the user on newly introduced features and changes to existing ones, but these changes are not downloaded automatically. Use <code>/q update</code> when you're ready to update.</li>
-<li>If a development version is being used, there will be a third setting here, <code>notify_dev_build</code>.
-    This is the same as <code>notify_new_release</code>, but it checks the development builds instead. There are no specific version checking here, so if the found dev number is higher, it will appear. You are responsible for downloading new development builds.</li>
+<li>
+<p><code>update</code> section controls the updater. It has the following settings:</p>
+<ul>
+<li><code>enabled</code> default <code>true</code>. Enables or disables the Updater. If set to false, it is not possible to update with the updater and no version checks are executed.</li>
+<li><code>strategy</code> default <code>MINOR</code>. The update strategy is more difficult to understand. A version is a number, that consists of three parts. For example <code>1.2.3</code>, the <code>1</code> is named <code>MAYOR</code>, the <code>2</code> <code>MINOR</code> and the <code>3</code> <code>PATCH</code>. The table below show you what will be downloaded with which strategy.
+  A strategy followed by a <code>_DEV</code> will also download new Dev-Builds.Be warned, that Dev-Builds can contain bugs.</li>
 </ul>
-</li>
+<table>
+<thead>
+<tr>
+<th>strategy</th>
+<th><code>MAYOR</code>/<code>MAYOR_DEV</code></th>
+<th><code>MINOR</code>/<code>MINOR_DEV</code></th>
+<th><code>PATCH</code>/<code>PATCH_DEV</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bug Fixes</td>
+<td><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></td>
+<td><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></td>
+<td><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></td>
+</tr>
+<tr>
+<td>New Features</td>
+<td><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></td>
+<td><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:"/></td>
+</tr>
+<tr>
+<td>Breaking Changes</td>
+<td><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:"/></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:"/></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>automatic</code> default <code>true</code>. If true the updater is downloading automatically new Versions. If false, the updater is only downloading new versions with the update command.</li>
 <li><code>default_journal_slot</code> is a number of slots where the journal will appear after using <code>/journal</code> command.</li>
 <li><code>citizens_npcs_by_name</code> sets whether NPCs from citizens2 should be identified in main.yml by their name instead of their id.</li>
 <li><code>max_npc_distance</code> is the distance you need to walk away from the NPC for the conversation to end (in the case of using chat-based conversation interface).</li>
@@ -521,19 +550,17 @@
 <li><code>notify_pullback</code> will display a message every time the player is pulled back by the <code>stop</code> option in conversations (in the case of chat-based conversations). It notifies players that they are in a conversation, and the pullback is not a bug.</li>
 <li><code>default_package</code> is a name of the package that should be used when a package is not specified in /q command. This is for your convenience.</li>
 <li><code>remove_items_after_respawn</code> option should be turned on if "keepInventory" gamerule is not being used. It prevents other plugins from duplicating quest items after death.
-    When a player dies, their quest items are removed from drops and stored in the backpack, but some plugins may try to restore all items to the player (for example WorldGuard custom flag keep-inventory). That is why BetonQuest removes the quest items that are in a player's inventory after they respawn again, to be sure they were not readded. The "keepInventory" gamerule, however, works differently - the items are never dropped, so they cannot be added to backpack. Removing them from the inventory would destroy them forever. Sadly, Bukkit does not allow for gamerule checking, so it is up to you to decide. Once again, if you have "keepInventory" gamerule true, this setting has to be false and vice versa.</li>
+When a player dies, their quest items are removed from drops and stored in the backpack, but some plugins may try to restore all items to the player (for example WorldGuard custom flag keep-inventory). That is why BetonQuest removes the quest items that are in a player's inventory after they respawn again, to be sure they were not readded. The "keepInventory" gamerule, however, works differently - the items are never dropped, so they cannot be added to backpack. Removing them from the inventory would destroy them forever. Sadly, Bukkit does not allow for gamerule checking, so it is up to you to decide. Once again, if you have "keepInventory" gamerule true, this setting has to be false and vice versa.</li>
 <li><code>quest_items_unbreakable</code> controls whether quest items can be broken by usage. This was used in the past, when <code>unbreakable</code> tag couldn't be added to items. Turn it off and make your quest items unbreakable by vanilla means.</li>
-<li>Sounds define what sounds will be played on these occasions:<ul>
+<li>Sounds define what sounds will be played on these occasions:</li>
 <li><code>start</code> and <code>end</code> refer to starting and ending conversations</li>
 <li><code>journal</code> is updating journal</li>
 <li><code>update</code> is played when there is a changelog file, used to draw your attention</li>
 <li><code>full</code> is played when the player uses /j command but his inventory is full.
 List of all possible sounds can be found <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html">here</a>.</li>
-</ul>
-</li>
 <li><code>cmd_blacklist</code> is a list of commands that can not be used while in conversation. Remember that you can only type single words (command names) here!</li>
 <li><code>hook</code> controls compatibility with other plugins. You can turn off each hook here.</li>
-<li><code>journal</code> controls various settings of the journal:<ul>
+<li><code>journal</code> controls various settings of the journal:</li>
 <li><code>chars_per_page</code> is the number of characters before a page break. If it is set too high, the text on a journal page can overflow and become invisible. <strong>This was replaced by <code>chars_per_line</code> and <code>lines_per_page</code> and is only required if you don't like the new behaviour.</strong></li>
 <li><code>chars_per_line</code> is the number of characters before a line break. If it is set too high, the text on a journal page can overflow and become invisible. If this is not set, BQ will fall back on the old page wrapping behaviour configured through <code>chars_per_page</code>.</li>
 <li><code>lines_per_page</code> is the number of lines before a new page. If it is set too high, the text on a journal page can overflow and become invisible. This is only required if <code>chars_per_line</code> is set.</li>
@@ -542,27 +569,21 @@ List of all possible sounds can be found <a href="https://hub.spigotmc.org/javad
 <li><code>hide_date</code> hides the date of each entry. Set it to true if you don't want this functionality.</li>
 <li><code>full_main_page</code> makes the main page always take a full page. If a lot of information is being displayed, it is advised to make this true. If you use the main page only for small notifications, set it to false, so the entries can follow immediately.</li>
 <li><code>show_separator</code> shows a separator between journal entries (default: true). Customize the separator in <code>messages.yml</code> with the key <code>journal_separator</code>.</li>
-</ul>
-</li>
-<li><code>journal_colors</code> controls the colors used in the journal. It takes color codes without the <code>&amp;</code> character.<ul>
+<li><code>journal_colors</code> controls the colors used in the journal. It takes color codes without the <code>&amp;</code> character.</li>
 <li><code>date.day</code> is the day number</li>
 <li><code>date.hour</code> is the hour number</li>
 <li><code>line</code> is the delimiter between entries</li>
 <li><code>text</code> is the text of the entry</li>
-</ul>
-</li>
-<li><code>conversation_colors</code> controls the colors of the conversation. It takes <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html">color names</a>. If you want to add a font style (bold, italic etc.) you can add it after a comma.<ul>
+<li><code>conversation_colors</code> controls the colors of the conversation. It takes <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html">color names</a>. If you want to add a font style (bold, italic etc.) you can add it after a comma.</li>
 <li><code>npc</code> is the name of the NPC</li>
 <li><code>player</code> is the name of the player</li>
 <li><code>text</code> is the NPC's text</li>
 <li><code>answer</code> is the text of player's answer (after choosing it)</li>
 <li><code>number</code> is the option number</li>
 <li><code>option</code> is the text of an option</li>
-</ul>
-</li>
 <li><code>date_format</code> is the Java <a href="https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">date format</a> used in journal dates. It needs to have a space between the day and hour.</li>
 <li><code>debug</code> is responsible for logging the plugin's activity to <em>debug.log</em> file in <em>logs</em> directory. Turning this on can slow your server down. However, if you experience any errors, turn this on and let the plugin gather the data and send logs to the developer. Note that the first run of the plugin will be logged anyway, just as a precaution.</li>
-<li><code>conversation_IO_config</code> manages settings for individual conoversation IO's:<ul>
+<li><code>conversation_IO_config</code> manages settings for individual conoversation IO's:</li>
 <li><code>chest</code> manages settings for the chest conversation IO<ul>
 <li><code>show_number</code> will show the player number option if true (default: true)</li>
 <li><code>show_npc_text</code> will show the npc text in every player option if true (default: true)</li>
@@ -597,7 +618,7 @@ List of all possible sounds can be found <a href="https://hub.spigotmc.org/javad
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1591825238000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1591832301000" locale="en"></span>
 </small>
 </div>
 </article>
