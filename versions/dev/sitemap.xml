@@ -16,79 +16,83 @@
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Welcome/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Welcome/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Frequently-Asked-Questions/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Frequently-Asked-Questions/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Installation-and-Configuration/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Installation-and-Configuration/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Quick-start-tutorial/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Quick-start-tutorial/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Tips-and-tricks/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Tips-and-tricks/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/Setting-up-a-local-test-server/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Getting-Started/Setting-up-a-local-test-server/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/Installing-BetonQuest/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Getting-Started/Installing-BetonQuest/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/Setting-up-the-editor/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Getting-Started/Setting-up-the-editor/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn%20Beton/Getting%20Started/YAML-for-questers/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Getting-Started/YAML-for-questers/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Commands%20and%20permissions/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Commands-and-permissions/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Compatibility/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Compatibility/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Conditions-List/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Conditions-List/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Events-List/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Events-List/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Notifications/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Notifications/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Objectives-List/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Objectives-List/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Reference/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Reference/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/Variables-List/</loc>
+     <loc>https://betonquest.pl/User-Documentation/Variables-List/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/User%20Documentation/CHANGELOG/</loc>
+     <loc>https://betonquest.pl/User-Documentation/CHANGELOG/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Developer%20Documentation/Info-for-developers/</loc>
+     <loc>https://betonquest.pl/Developer-Documentation/Info-for-developers/</loc>
+     <lastmod>2020-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://betonquest.pl/Developer-Documentation/Releasing/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -101,10 +105,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://betonquest.pl/Contributing/Docs/</loc>
-     <lastmod>2020-06-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://betonquest.pl/Contributing/Devs/Releasing/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
     </url>

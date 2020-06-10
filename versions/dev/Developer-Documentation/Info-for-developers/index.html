@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://betonquest.pl/Contributing/old_contributing/" rel="canonical"/>
+<link href="https://betonquest.pl/Developer-Documentation/Info-for-developers/" rel="canonical"/>
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../images/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1, mkdocs-material-5.2.1" name="generator"/>
-<title>Old - BetonQuest - 1.12.0-DEV-20</title>
+<title>Info for developers - BetonQuest - 1.12.0-DEV-20</title>
 <link href="../../assets/stylesheets/main.71dfd922.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.616af814.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -28,7 +28,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#contributing">
+<a class="md-skip" href="#info-for-developers">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
-              Old
+              Info for developers
             
           </span>
 </div>
@@ -114,12 +114,12 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Developer-Documentation/Info-for-developers/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
           Developer Documentation
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../Contributing/">
+<a class="md-tabs__link" href="../../Contributing/Contributing/">
           Contributing
         </a>
 </li>
@@ -335,8 +335,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
       Developer Documentation
       <span class="md-nav__icon md-icon">
@@ -351,21 +351,98 @@
         Developer Documentation
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Developer-Documentation/Info-for-developers/" title="Info for developers">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Info for developers
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Info for developers">
       Info for developers
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-the-plugin">
+    Accessing the plugin
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Developer-Documentation/Releasing/" title="Releasing">
+<a class="md-nav__link" href="#writing-events">
+    Writing events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-conditions">
+    Writing conditions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-objectives">
+    Writing objectives
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reading-instruction-object">
+    Reading Instruction object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-variables">
+    Writing variables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#firing-events">
+    Firing events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checking-conditions">
+    Checking conditions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-objectives">
+    Starting objectives
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-additional-conversation-inputoutput-methods">
+    Creating additional conversation input/output methods
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listening-to-betonquest-bukkit-events">
+    Listening to BetonQuest (Bukkit) events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debugging">
+    Debugging
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Releasing/" title="Releasing">
       Releasing
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-5">
       Contributing
       <span class="md-nav__icon md-icon">
@@ -381,88 +458,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Contributing/" title="Contributing">
+<a class="md-nav__link" href="../../Contributing/Contributing/" title="Contributing">
       Contributing
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Old
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Old">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contributing/old_contributing/" title="Old">
       Old
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#new-ideas">
-    New ideas
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#bug-reports">
-    Bug reports
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#translations">
-    Translations
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#contributing-code">
-    Contributing code
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#contributing-documentation">
-    Contributing documentation
-  </a>
-<nav aria-label="Contributing documentation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dev-environment">
-    Dev Environment
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#change-pdf-theme">
-    Change PDF Theme
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#positive-feedback">
-    Positive feedback
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#donations">
-    Donations
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Docs/" title="Docs">
+<a class="md-nav__link" href="../../Contributing/Docs/" title="Docs">
       Docs
     </a>
 </li>
@@ -486,57 +492,63 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#new-ideas">
-    New ideas
+<a class="md-nav__link" href="#accessing-the-plugin">
+    Accessing the plugin
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#bug-reports">
-    Bug reports
+<a class="md-nav__link" href="#writing-events">
+    Writing events
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#translations">
-    Translations
+<a class="md-nav__link" href="#writing-conditions">
+    Writing conditions
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#contributing-code">
-    Contributing code
+<a class="md-nav__link" href="#writing-objectives">
+    Writing objectives
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#contributing-documentation">
-    Contributing documentation
-  </a>
-<nav aria-label="Contributing documentation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
+<a class="md-nav__link" href="#reading-instruction-object">
+    Reading Instruction object
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dev-environment">
-    Dev Environment
+<a class="md-nav__link" href="#writing-variables">
+    Writing variables
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#change-pdf-theme">
-    Change PDF Theme
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#positive-feedback">
-    Positive feedback
+<a class="md-nav__link" href="#firing-events">
+    Firing events
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#donations">
-    Donations
+<a class="md-nav__link" href="#checking-conditions">
+    Checking conditions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-objectives">
+    Starting objectives
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-additional-conversation-inputoutput-methods">
+    Creating additional conversation input/output methods
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listening-to-betonquest-bukkit-events">
+    Listening to BetonQuest (Bukkit) events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debugging">
+    Debugging
   </a>
 </li>
 </ul>
@@ -546,50 +558,81 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../../pdf/BetonQuest.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
-<h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">¶</a></h1>
-<p>Do you like my work here? There are some ways you can help to make this plugin even better:</p>
-<h2 id="new-ideas">New ideas<a class="headerlink" href="#new-ideas" title="Permanent link">¶</a></h2>
-<p>Need something? Or just have a brilliant idea? Head to the <a href="https://github.com/Co0sh/BetonQuest/issues">Issues</a> and create new one. Just remember to start the title with uppercase letter or I will edit it!</p>
-<h2 id="bug-reports">Bug reports<a class="headerlink" href="#bug-reports" title="Permanent link">¶</a></h2>
-<p>Found a bug? Great, create new <a href="https://github.com/Co0sh/BetonQuest/issues">issue</a> so I can fix it in the next version!</p>
-<h2 id="translations">Translations<a class="headerlink" href="#translations" title="Permanent link">¶</a></h2>
-<p>I love to see this plugin used by people from other countries. I would be happy if you could translate it to your language and share the translation with me. You can send me the edited <em>messages.yml</em> file or submit a pull request.</p>
-<h2 id="contributing-code">Contributing code<a class="headerlink" href="#contributing-code" title="Permanent link">¶</a></h2>
-<p>If you know Java and Bukkit you can take some issue and create pull request. Just let me know and remember these few things:</p>
-<ul>
-<li>The contributed code should be well tested and fully working.</li>
-<li>Use only spaces for indentation.</li>
-<li>Wrap your code at 120<sup>th</sup> character.</li>
-<li>Comment everything so the code is easy to understand for everyone.</li>
-<li>Use block comments to document classes, methods and fields.</li>
-</ul>
-<h2 id="contributing-documentation">Contributing documentation<a class="headerlink" href="#contributing-documentation" title="Permanent link">¶</a></h2>
-<p>If you can help improve the documentation it would be highly appreciated. Have a look under the <code>docs</code> folder for the existing documentation.</p>
-<p>Documentation is built using <code>mkdocs</code>. You can set up an hot-build dev environment that will auto-refresh changes as they are made.</p>
-<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h3>
-<ul>
-<li>python3</li>
-<li>pip3</li>
-<li>npm (only if changing themes)</li>
-</ul>
-<p>Install dependencies by running:</p>
-<div class="highlight"><pre><span></span><code>pip3 install -r requirements.txt
+<h1 id="info-for-developers">Info for developers<a class="headerlink" href="#info-for-developers" title="Permanent link">¶</a></h1>
+<h2 id="accessing-the-plugin">Accessing the plugin<a class="headerlink" href="#accessing-the-plugin" title="Permanent link">¶</a></h2>
+<p>You can either add BetonQuest.jar directly to your build path or use Maven. First option if you're using Eclipse:</p>
+<ol>
+<li>Create a folder called lib in your project folder.</li>
+<li>Put BetonQuest.jar in this folder.</li>
+<li>Refresh your project in Eclipse.</li>
+<li>In Eclipse Project Explorer right click on BetonQuest.jar and select <code>Build Path -&gt; Add to Build Path</code>.</li>
+</ol>
+<p>And if you're using Maven simply add this (temporary repo) to your <em>pom.xml</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;repositories&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>betonquest-repo<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>http://amberproject.net:8082/repository/AmberProject/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/repositories&gt;</span>
+
+<span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>pl.betoncraft<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>betonquest<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.12.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
 </code></pre></div>
-<h3 id="dev-environment">Dev Environment<a class="headerlink" href="#dev-environment" title="Permanent link">¶</a></h3>
-<p>To start an http document server on <code>http://127.0.0.1:8000</code> execute:</p>
-<div class="highlight"><pre><span></span><code>mkdocs serve
-</code></pre></div>
-<h3 id="change-pdf-theme">Change PDF Theme<a class="headerlink" href="#change-pdf-theme" title="Permanent link">¶</a></h3>
-<p>Edit the PDF theme under <code>design/pdf</code>. Rebuild by doing the following:</p>
-<div class="highlight"><pre><span></span><code>cd design/pdf
-npm install
-npm run build-compressed
-</code></pre></div>
-<p>This will update <code>pdf.css</code> under <code>docs/css/pdf.css</code>. Rebuilding the docs will now use the new theme.</p>
-<h2 id="positive-feedback">Positive feedback<a class="headerlink" href="#positive-feedback" title="Permanent link">¶</a></h2>
-<p>I really like to hear that people are using my plugin. If you've got a server and have made a few quests just let me know so I can check it out ^^</p>
-<h2 id="donations">Donations<a class="headerlink" href="#donations" title="Permanent link">¶</a></h2>
-<p>If you have some spare money and REALLY like this plugin you can donate <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=KG6S76KP4W6UG">here</a>. This project however is not dependent on donations, so it's really optional :)</p>
+<p>The version you need to choose must be 1.12.0 or newer. If you want to use dev builds use <code>X.X.X-SNAPSHOT</code>.
+Check amberproject.net:8082/repository/AmberProject/ if you are not sure</p>
+<h2 id="writing-events">Writing events<a class="headerlink" href="#writing-events" title="Permanent link">¶</a></h2>
+<p>Writing events is the easiest. You need to create a class extending <code>QuestEvent</code> for each new event. The constructor must take one argument, an <code>Instruction</code> object. In the constructor you must extract all information from the instruction, for example skill names, locations etc. The description of the <code>Instruction</code> class is down below. Don't worry about checking event conditions, these are handled by the rest of BetonQuest's logic.</p>
+<p>Events are not bound to any player so firing it is done through <code>fire(String playerID)</code> method. You have to override it with your code responsible for doing stuff your event should do. Here you should use data previously parsed by the constructor. Don't access <code>Instruction</code> object here, it will lower the performance. You can convert <code>playerID</code> to <code>Player</code> object using the <code>PlayerConverter</code> class (it's a relict of times when both UUIDs and names could be used in Bukkit to identify players).</p>
+<p>If you want your event to be <em>persistent</em>, you need to set <code>super.persistent</code> variable to <code>true</code> in the constructor. This will make BetonQuest run this event even if the <code>playerID</code> points to an offline player, so prepare your code for that.</p>
+<p>If you want your event to be <em>static</em>, you need to set <code>super.staticness</code> variable to <code>true</code> in the constructor. This will allow BetonQuest to run this event with <code>playerID</code> set to <code>null</code>, so prepare your code for that.</p>
+<p>When you'll finish your class you need to invoke <code>registerEvents(String name, Class&lt;? extends QuestEvent&gt; class)</code> from BetonQuest instance (which you can get using <code>BetonQuest.getInstance()</code> static method). The name for your event will be used in instruction strings (such as "journal" for journal event). The class argument is the <code>Class</code> object of your event. You can get it using <code>YourEvent.class</code>. That's it, you created an event. Don't forget to check it for bugs!</p>
+<h2 id="writing-conditions">Writing conditions<a class="headerlink" href="#writing-conditions" title="Permanent link">¶</a></h2>
+<p>Writing conditions is easy too. They must extend <code>Condition</code> and override <code>check(String playerID)</code> method, which should return <code>true</code> or <code>false</code>, depending on if the condition was met. You register them using <code>registerConditions(String name, Class&lt;? extends Condition)</code> method from BetonQuest instance as well. The rest is almost the same, you're defining the constructor which will parse the <code>Instruction</code> object and overriding <code>check(String playerID)</code> method to check if the player meets the condition. Don't worry about inverting it, as it's automatically done by BetonQuest.</p>
+<p>Conditions are always getting an online player in the <code>check(String playerID)</code> method, so you don't need to check that manually.</p>
+<h2 id="writing-objectives">Writing objectives<a class="headerlink" href="#writing-objectives" title="Permanent link">¶</a></h2>
+<p>Objectives are more complicated because they use event handlers and they must store players' data. They extend <code>Objective</code> class. As always, you need to extract all data from supplied <code>Instruction</code> object in the constructor. Don't register listeners in the constructor!</p>
+<p>If your objective handles changing data (like amount of mobs left to kill) you should create a class extending <code>ObjectiveData</code>. For example <code>block</code> objective does need to store amount of blocks left to place/break, and it does that using "BlockData" class. In the constructor it receives three strings: data string, ID of the player and ID of the objective. The latter two are used by BetonQuest to correctly save and load the former one from the database.</p>
+<p>The data string should contains all the information you need in your objective. You must write a parser which will extract the information, methods used in the objective to alter the information, and override the <code>toString()</code> method in so it returns data string in the format parsable by your parser. Everytime the data in your object changes (like when killing a mob), you need to call <code>update()</code> method. It will save the data to the database.</p>
+<p>Now you should override <code>getDefaultDataInstruction()</code> method. It must return the default data instruction understandable by your parser. For example in <code>tame</code> objective it will return the amount of mobs to tame. If you don't use data objects, just return an empty string (not <code>null</code>, just <code>""</code>).</p>
+<p>In order for your objective to use the data object you have created you need to set the <code>template</code> variable to this object's class. If you're not defining the data object (because you don't need to handle the changing data), you should set the <code>template</code> simply to <code>ObjectiveData.class</code>.</p>
+<p>Every time your objective accepts the player's action (for example killing the right mob in MobKill objective) it must be also verified with <code>checkConditions()</code> method. You don't want your objective ignoring all conditions, right? When you decide that the objective is completed you should call <code>completeObjective()</code> method. It will fire all events for you, so you don't have to do this manually.</p>
+<p><code>start()</code> and <code>stop()</code> methods must start objective's listeners and stop them accordingly. It's because the plugin turns the objective's listeners off if there are no players having it active. Here usually you will register/unregister listeners, but some objectives may be different. For example <code>delay</code> objective starts and cancels a runnable, instead of using listeners.</p>
+<p>If your objective has some properties (used in variables) you should override the <code>String getProperty(String property, String playerID)</code> method. At runtime, if anyone uses <code>%objective.yourObjective.theProperty%</code> variable, BetonQuest will call that method with <code>theProperty</code> keyword as the first argument. Using it you should parse the data of the objective and return it as a String. If the supplied property name is incorrect or there was an error during getting the value, return an empty String and optionally log an error (<code>Debug.error(String message)</code>).</p>
+<p>Objectives are registered the same way as conditions and events, using <code>registerObjective(String name, Class&lt;? extends Objective&gt;)</code> method.</p>
+<h2 id="reading-instruction-object">Reading <code>Instruction</code> object<a class="headerlink" href="#reading-instruction-object" title="Permanent link">¶</a></h2>
+<p>The <code>Instruction</code> object parses the instruction string defined by the user and splits it into arguments. You can ask it for required arguments one by one with <code>next()</code> method or a parser method like <code>getQuestItem()</code>. Required arguments are the ones specified at the very beginning of an instruction string, for example <code>add someTag</code> in <code>tag</code> event. It will automaticly throw <code>InstructionParseException</code> for you if it encounters an error, for example when there were no more arguments in user's instruction or it can't parse the argument to the type you asked for.</p>
+<p>You can also ask for optional arguments: if the instruction string contains argument <code>arg:something</code> and you ask for optional <code>arg</code>, it will give you <code>something</code>. If there is no optional argument, it will return <code>null</code>. Don't worry about passing that <code>null</code> to parser methods like <code>getLocation(String)</code>, they won't throw an error, they'll simply return that <code>null</code>.</p>
+<p>Parser methods are there for your convenience. You could write a location parser for yourself, but there's no need for that, you can just use <code>getLocation()</code> or <code>getLocation(String)</code> method and receive <code>LocationData</code> object. The former method is simply <code>getLocation(next())</code>.</p>
+<p>If your instruction is more complicated and <code>Instruction</code> class doesn't provide necessary methods, you can still parse the instruction string manually. You can get it with <code>getInstruction()</code> method. Just remember to throw <code>InstructionParseException</code> when the instruction supplied by the user is incorrect. BetonQuest will catch them and display a message in the console.</p>
+<h2 id="writing-variables">Writing variables<a class="headerlink" href="#writing-variables" title="Permanent link">¶</a></h2>
+<p>All variables need to extend <code>Variable</code> class. In the constructor you must parse the instruction and extract all information about your variable's behavior. Then you have to override the <code>String getValue(String playerID)</code> method. It should return the value of the variable for the supplied player. If it's impossible, it should return an empty String. Registering variables is done via <code>BetonQuest.registerVariable(String name, Class&lt;? extends Variable&gt; variable)</code> method.</p>
+<h2 id="firing-events">Firing events<a class="headerlink" href="#firing-events" title="Permanent link">¶</a></h2>
+<p>The plugin has a static method for firing events - <code>event(String playerID, EventID eventID)</code>. First parameter is ID of the player. Second one represents ID of the event. To get it, simply create an instance of the <code>EventID</code> class. You can't fire an event directly using an instruction string.</p>
+<h2 id="checking-conditions">Checking conditions<a class="headerlink" href="#checking-conditions" title="Permanent link">¶</a></h2>
+<p>BetonQuest has static boolean method <code>condition(String playerID, String conditionID)</code>. It works similarly as event method described above.</p>
+<h2 id="starting-objectives">Starting objectives<a class="headerlink" href="#starting-objectives" title="Permanent link">¶</a></h2>
+<p>The <code>newObjective(String playerID, String objectiveID)</code> method will launch the objective from start. You can however use <code>resumeObjective(String playerID, String objectiveID, String instruction)</code> to pass your own <code>ObjectiveData</code> instruction to the objective. It will not be saved to the database, because it is assumed that the objective has just been loaded from it and it exists there without any change. You should save it manually.</p>
+<h2 id="creating-additional-conversation-inputoutput-methods">Creating additional conversation input/output methods<a class="headerlink" href="#creating-additional-conversation-inputoutput-methods" title="Permanent link">¶</a></h2>
+<p>In order to register an object as the conversation input/output it needs to implement <code>ConversationIO</code> interface. The constructor will receive three arguments: Conversation object, playerID String and NPC name String. It needs to parse the required data here and register all needed listeners. The <code>setResponse(String response)</code> method will receive NPC's text from the conversation. The <code>addOption(String option)</code> method will be called by the conversation for each reply option for this NPC text. The object must store all this data and when <code>display()</code> is called, it must use it to display the player the output. When it detects that the player chose an answer, it should pass it to the conversation using <code>Conversation.passPlayerAnswer(int number)</code> method. The integer is the number of the answer, starting at 1. <code>clear()</code> method will be called at the beginning of the new conversation cycle. It should clear all the previous options, so they do not overlap. <code>end()</code> method will be called when the conversation ends and it should unregister all listeners. You can also call that message when you detect that the player forced conversation ending (for example by moving away from the NPC). Remember to notify the conversation about that using <code>Conversation.end()</code>.</p>
+<p>Registering the conversation inputs/outputs is done in the same way as objectives, events and conditions, through <code>BetonQuest.registerConversationIO(String name, Class&lt;? extends ConversationIO&gt;)</code> method.</p>
+<h2 id="listening-to-betonquest-bukkit-events">Listening to BetonQuest (Bukkit) events<a class="headerlink" href="#listening-to-betonquest-bukkit-events" title="Permanent link">¶</a></h2>
+<p>BetonQuest calls Bukkit events on a few occasions: when a conversation is started, finished and when an option is selected. You can find these events in <code>pl.betoncraft.betonquest.api</code> package and use them in your plugins. If you need any additional events just open and issue on GitHub or send me a pull request.</p>
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">¶</a></h2>
+<p>You can debug your code using <code>LogUtils</code> class by simply call <code>LogUtils.getlogger().log(..)</code> to log something.</p>
+<p>We use the following levels for this aspects:
+- <code>SEVER</code> - Anything happen, that breaks the plugin, or a main function of the plugin
+- <code>WARNING</code> - The most things, where something not normal or unexpected happens, but the plugin still work correctly for the rest(all catch blocks, when not SEVER)
+- <code>INFO</code> - Anything you want to log, that also should appear in the normal console
+- <code>CONFIG</code> - Not in use at the moment
+- <code>FINE</code> - All messages, that you want to only appear in the debug log file, not in the console
+- <code>FINER</code> - Do not use this, this is reserved, for exception logging, like you call LogUtils.logThrowable or LogUtils.logThrowableIgnore
+- <code>FINEST</code> - Not in use at the moment</p>
+<p>If you have a <code>catch</code> block, please log this with a message, that calls <code>exception.getMessage()</code> and log the complete exception by using the <code>Logutils.logThrowable(e)</code>. The methods <code>logThrowableReport()</code> and <code>logThrowableIgnore()</code> may only be executed by BetonQuest.</p>
 <hr/>
 <div class="md-source-date">
 <small>
@@ -604,7 +647,7 @@ npm run build-compressed
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../Contributing/" rel="prev" title="Contributing">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../User-Documentation/CHANGELOG/" rel="prev" title="Changelog">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -613,17 +656,17 @@ npm run build-compressed
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Contributing
+                Changelog
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../Docs/" rel="next" title="Docs">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../Releasing/" rel="next" title="Releasing">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Docs
+                Releasing
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
