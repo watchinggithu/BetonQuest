@@ -9,7 +9,7 @@
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.3.2" name="generator"/>
-<title>Compatibility - BetonQuest - 1.12.0-DEV-66</title>
+<title>Compatibility - BetonQuest - 1.12.0-DEV-67</title>
 <link href="../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -35,7 +35,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-66" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-66">
+<a aria-label="BetonQuest - 1.12.0-DEV-67" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-67">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -44,7 +44,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-66
+            BetonQuest - 1.12.0-DEV-67
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -132,10 +132,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-66" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-66">
+<a aria-label="BetonQuest - 1.12.0-DEV-67" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-67">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-66
+    BetonQuest - 1.12.0-DEV-67
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -334,10 +334,10 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#citizens">
-    Citizens
+<a class="md-nav__link" href="#npcs-with-citizens">
+    NPC's with Citizens
   </a>
-<nav aria-label="Citizens" class="md-nav">
+<nav aria-label="NPC's with Citizens" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conditions">
@@ -372,6 +372,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#move-npc-movenpc">
     Move NPC: movenpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stop-moving-npc-stopnpc">
+    Stop moving NPC: stopnpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teleport-npc-teleportnpc">
+    Teleport NPC: teleportnpc
   </a>
 </li>
 </ul>
@@ -1196,10 +1206,10 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#citizens">
-    Citizens
+<a class="md-nav__link" href="#npcs-with-citizens">
+    NPC's with Citizens
   </a>
-<nav aria-label="Citizens" class="md-nav">
+<nav aria-label="NPC's with Citizens" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conditions">
@@ -1234,6 +1244,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#move-npc-movenpc">
     Move NPC: movenpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stop-moving-npc-stopnpc">
+    Stop moving NPC: stopnpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teleport-npc-teleportnpc">
+    Teleport NPC: teleportnpc
   </a>
 </li>
 </ul>
@@ -1903,21 +1923,24 @@ and WorldGuard.</p>
 <h2 id="bountifulapi"><a href="https://www.spigotmc.org/resources/bountifulapi-1-8-1-12-1.1394/">BountifulAPI</a><a class="headerlink" href="#bountifulapi" title="Permanent link">¶</a></h2>
 <h3 id="events">Events<a class="headerlink" href="#events" title="Permanent link">¶</a></h3>
 <h4 id="title-title">Title: <code>title</code><a class="headerlink" href="#title-title" title="Permanent link">¶</a></h4>
-<p>BountifulAPI enables you to use <code>title</code> event without spamming the console with <code>/title</code> command output. The syntax is exactly the same as in regular <code>title</code> event described in <em>Events List</em>.</p>
+<p>BountifulAPI enables you to use <code>title</code> event without spamming the console with <code>/title</code> command output.
+The syntax is exactly the same as in regular <code>title</code> event described in <em>Events List</em>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">title subtitle 0;0;0 {en} Lobby joined! {pl} Dołączono do lobby!</span>
 </code></pre></div>
 </div>
-<h2 id="citizens"><a href="http://dev.bukkit.org/bukkit-plugins/citizens/">Citizens</a><a class="headerlink" href="#citizens" title="Permanent link">¶</a></h2>
-<p>If you have this plugin you can use it's NPCs for conversations. I highly recommend you installing it, these NPCs are way more immersive. Having Citizens also allows you to use NPCKill objective.</p>
+<h2 id="npcs-with-citizens">NPC's with <a href="http://dev.bukkit.org/bukkit-plugins/citizens/">Citizens</a><a class="headerlink" href="#npcs-with-citizens" title="Permanent link">¶</a></h2>
+<p>If you have this plugin you can use it's NPCs for conversations. I highly recommend you installing it,
+it's NPCs are way more immersive. Having Citizens also allows you to use NPCKill objective and to have moving NPC's.</p>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
 <p>When you use Citizens, in main.yml you need to specify the ID of the NPC instead of the name!</p>
 </div>
 <h3 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link">¶</a></h3>
 <h4 id="npc-distance-npcdistance">NPC distance: <code>npcdistance</code><a class="headerlink" href="#npc-distance-npcdistance" title="Permanent link">¶</a></h4>
-<p>This condition will return true if the player is closer to the NPC with the given ID than the given distance. The NPCs ID is the first argument, the distance is the second. If the npc is despawned the condition will return false.</p>
+<p>This condition will return true if the player is closer to the NPC with the given ID than the given distance.
+ The NPCs ID is the first argument, the distance is the second. If the npc is despawned the condition will return false.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">npcdistance 16 22</span>
@@ -1945,15 +1968,38 @@ and WorldGuard.</p>
 </div>
 <h3 id="events_1">Events<a class="headerlink" href="#events_1" title="Permanent link">¶</a></h3>
 <h4 id="move-npc-movenpc">Move NPC: <code>movenpc</code><a class="headerlink" href="#move-npc-movenpc" title="Permanent link">¶</a></h4>
-<p>This event will make the NPC move to a specified location. It will not return on its own, so you have to set a single path point with <em>/npc path</em> command - it will then return to that point every time. If you make it move too far away, it will teleport or break, so beware. You can change maximum pathfinding range in Citizens configuration files. The first argument in this event is ID of the NPC to move. Second one is a location in a standard format (like in <code>teleport</code> event). You can also specify multiple locations separated by colons to let the npc follow a path of locations. You can also specify additional arguments: <code>block</code> will block the NPC so you won't be able to start a conversation with him while he is moving, <code>wait:</code> is a number of tick the NPC will wait at its destination before firing events, <code>done:</code> is a list of events fired after reaching the destination, <code>fail:</code> is a list of events fired if this event fails. Move event can fail if the NPC is already moving for another player.</p>
+<p>This event will make the NPC move to a specified location. It will not return on its own,
+so you have to set a single path point with <em>/npc path</em> command - it will then return to that point every time.
+If you make it move too far away, it will teleport or break, so beware. You can change maximum pathfinding range in Citizens
+configuration files. The first argument in this event is ID of the NPC to move. Second one is a location in a standard format (like in <code>teleport</code> event).
+You can also specify multiple locations separated by colons to let the npc follow a path of locations.
+You can also specify additional arguments: <code>block</code> will block the NPC so you won't be able to start a conversation with him while he is moving,
+<code>wait:</code> is a number of tick the NPC will wait at its destination before firing events,
+<code>done:</code> is a list of events fired after reaching the destination, <code>fail:</code> is a list of events fired if this event fails.
+Move event can fail if the NPC is already moving for another player.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">movenpc 121 100;200;300;world,105;200;280;world block wait:20 done:msg_were_here,give_reward fail:msg_cant_go,give_reward</span>
 </code></pre></div>
 </div>
+<h4 id="stop-moving-npc-stopnpc">Stop moving NPC: <code>stopnpc</code><a class="headerlink" href="#stop-moving-npc-stopnpc" title="Permanent link">¶</a></h4>
+<p>This will stop all current move tasks for the npc with the given ID.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">stopnpc 16</span>
+</code></pre></div>
+</div>
+<h4 id="teleport-npc-teleportnpc">Teleport NPC: <code>teleportnpc</code><a class="headerlink" href="#teleport-npc-teleportnpc" title="Permanent link">¶</a></h4>
+<p>This event will teleport the NPC with the given ID to the given location.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">teleportnpc 53 100;200;300;world</span>
+</code></pre></div>
+</div>
 <h3 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">¶</a></h3>
 <h4 id="npc-interact-npcinteract">NPC Interact: <code>npcinteract</code><a class="headerlink" href="#npc-interact-npcinteract" title="Permanent link">¶</a></h4>
-<p>The player has to right-click on the NPC with specified ID. It can also optionally cancel the action, so the conversation won't start. The first argument is number (ID of the NPC), and the second is optional <code>cancel</code>.</p>
+<p>The player has to right-click on the NPC with specified ID. It can also optionally cancel the action, so the conversation won't start.
+The first argument is number (ID of the NPC), and the second is optional <code>cancel</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">npcinteract 3 cancel conditions:sneak events:steal`</span>
@@ -2438,7 +2484,7 @@ be displayed to the player for which you ran the event.</p>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1593622842000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1593697378000" locale="en"></span>
 </small>
 </div>
 </article>
