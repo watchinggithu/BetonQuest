@@ -9,7 +9,7 @@
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.3.2" name="generator"/>
-<title>Tips and tricks - BetonQuest - 1.12.0-DEV-107</title>
+<title>Tips and tricks - BetonQuest - 1.12.0-DEV-108</title>
 <link href="../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -35,7 +35,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-107" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-107">
+<a aria-label="BetonQuest - 1.12.0-DEV-108" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-108">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -44,7 +44,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-107
+            BetonQuest - 1.12.0-DEV-108
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -132,10 +132,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-107" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-107">
+<a aria-label="BetonQuest - 1.12.0-DEV-108" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-108">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-107
+    BetonQuest - 1.12.0-DEV-108
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -559,7 +559,7 @@
 <h2 id="random-daily-quests">Random daily quests<a class="headerlink" href="#random-daily-quests" title="Permanent link">¶</a></h2>
 <p>Starting the random quest must be blocked with a special tag. If there is no such tag, the conversation option should appear. Create a few quests, each of them started with single <code>folder</code> event (they <strong>must</strong> be started by single event!). Now add those events to another <code>folder</code> event and make it <code>random:1</code>. At the end of every quest add <code>delay</code> which will reset the special blocking tag. Now add that <code>folder</code> event to the conversation option. When the player chooses it he will start one random quest, and the conversation option will become available after defined in <code>delay</code> objective time after completing the quest.</p>
 <h2 id="each-day-different-quest-same-for-every-player">Each day different quest (same for every player)<a class="headerlink" href="#each-day-different-quest-same-for-every-player" title="Permanent link">¶</a></h2>
-<p>To do this use something called "<a href="https://github.com/Co0sh/BetonQuest/wiki/Other-important-stuff#static-events">Static event</a>". Using the static event run <code>folder</code> event every day at some late hour (for example 4am). The <code>folder</code> event should be <code>random:1</code> and contain several different <code>setblock</code> events. These events will set some specific block to several different material types (for example dirt, stone, wood, sand etc). Now when the player starts the conversation and asks about the daily quest the NPC should check (using <code>testforblock</code> condition) which type of block is currently set and give the player different quest, depending on the block type.</p>
+<p>To do this use something called "<a href="../../User-Documentation/Reference/#static-events">Static event</a>". Using the static event run <code>folder</code> event every day at some late hour (for example 4am). The <code>folder</code> event should be <code>random:1</code> and contain several different <code>setblock</code> events. These events will set some specific block to several different material types (for example dirt, stone, wood, sand etc). Now when the player starts the conversation and asks about the daily quest the NPC should check (using <code>testforblock</code> condition) which type of block is currently set and give the player different quest, depending on the block type.</p>
 <h2 id="make-the-npc-react-randomly">Make the NPC react randomly<a class="headerlink" href="#make-the-npc-react-randomly" title="Permanent link">¶</a></h2>
 <p>Imagine you want to lie to NPC and he has 15% chance of believing you completely, 35% of being suspicious and 50% of not believing at all. The common denominator for those percentages is 20, so we can write it as 3/20, 7/20 and 10/20. The NPC will check options one after another until it finds one which meets all conditions. We will use <code>random</code> condition with our options. The first one will have <code>3-20</code> chance (that's the format used by <code>random</code> condition). If this condition fails, the NPC will check next option. But it won't be <code>7-20</code>, because we already "used" 3 of 20. If you wrote it like that, the chance would be too low. That's why it will be <code>7-17</code>. The third option should have <code>10-10</code> (because <code>17 - 7 = 10</code> and 50% is 10/20), but as you can see it will always be true. It's because we want the last option to be shown if both previous fail. You don't have to add the last condition at all.</p>
 <h2 id="quest-gui">Quest GUI<a class="headerlink" href="#quest-gui" title="Permanent link">¶</a></h2>
@@ -568,7 +568,7 @@
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1596210972000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1596215536000" locale="en"></span>
 </small>
 </div>
 </article>
