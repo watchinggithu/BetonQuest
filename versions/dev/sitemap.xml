@@ -20,18 +20,6 @@
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn-Beton/Frequently-Asked-Questions/</loc>
-     <lastmod>2020-08-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://betonquest.pl/Learn-Beton/Quick-start-tutorial/</loc>
-     <lastmod>2020-08-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://betonquest.pl/Learn-Beton/Tips-and-tricks/</loc>
-     <lastmod>2020-08-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://betonquest.pl/Learn-Beton/Getting-Started/Setting-up-a-local-test-server/</loc>
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
@@ -44,7 +32,15 @@
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Learn-Beton/Getting-Started/YAML-for-questers/</loc>
+     <loc>https://betonquest.pl/Learn-Beton/Getting-Started/Quick-Start-Tutorial/</loc>
+     <lastmod>2020-08-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://betonquest.pl/Learn-Beton/Frequently-Asked-Questions/</loc>
+     <lastmod>2020-08-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://betonquest.pl/Learn-Beton/Tips-and-tricks/</loc>
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -96,7 +92,11 @@
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Developer-Documentation/Info-for-developers/</loc>
+     <loc>https://betonquest.pl/Developer-Documentation/Contributing-Guidelines/</loc>
+     <lastmod>2020-08-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://betonquest.pl/Developer-Documentation/API/</loc>
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -112,15 +112,11 @@
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Contributing/Docs/Setup/</loc>
+     <loc>https://betonquest.pl/Contributing/Documentation/Setup/</loc>
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://betonquest.pl/Contributing/Docs/Guidelines/</loc>
-     <lastmod>2020-08-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://betonquest.pl/Contributing/old_contributing/</loc>
+     <loc>https://betonquest.pl/Contributing/Documentation/Guidelines/</loc>
      <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url>

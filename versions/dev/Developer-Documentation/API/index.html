@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://betonquest.pl/Developer-Documentation/Info-for-developers/" rel="canonical"/>
+<link href="https://betonquest.pl/Developer-Documentation/API/" rel="canonical"/>
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.3.2" name="generator"/>
-<title>Info for developers - BetonQuest - 1.12.0-DEV-125</title>
+<title>API - BetonQuest - 1.12.0-DEV-127</title>
 <link href="../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -27,7 +27,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#info-for-developers">
+<a class="md-skip" href="#accessing-the-plugin">
           Skip to content
         </a>
 </div>
@@ -35,7 +35,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-125" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-125">
+<a aria-label="BetonQuest - 1.12.0-DEV-127" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-127">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -44,11 +44,11 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-125
+            BetonQuest - 1.12.0-DEV-127
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
-              Info for developers
+              API
             
           </span>
 </div>
@@ -113,7 +113,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="./">
+<a class="md-tabs__link md-tabs__link--active" href="../Contributing-Guidelines/">
           Developer Documentation
         </a>
 </li>
@@ -132,10 +132,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-125" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-125">
+<a aria-label="BetonQuest - 1.12.0-DEV-127" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-127">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-125
+    BetonQuest - 1.12.0-DEV-127
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -208,31 +208,16 @@
       Welcome!
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Learn-Beton/Frequently-Asked-Questions/" title="Frequently Asked Questions">
-      Frequently Asked Questions
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Learn-Beton/Quick-start-tutorial/" title="Quick start tutorial">
-      Quick start tutorial
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Learn-Beton/Tips-and-tricks/" title="Tips and tricks">
-      Tips and tricks
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" id="nav-2-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-2-5">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" id="nav-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2-2">
       Getting Started
       <span class="md-nav__icon md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
 </span>
 </label>
 <nav aria-label="Getting Started" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="nav-2-5">
+<label class="md-nav__title" for="nav-2-2">
 <span class="md-nav__icon md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </span>
@@ -245,8 +230,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Learn-Beton/Getting-Started/Installing-BetonQuest/" title="Installing BetonQuest">
-      Installing BetonQuest
+<a class="md-nav__link" href="../../Learn-Beton/Getting-Started/Installing-BetonQuest/" title="Installation">
+      Installation
     </a>
 </li>
 <li class="md-nav__item">
@@ -255,12 +240,22 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Learn-Beton/Getting-Started/YAML-for-questers/" title="YAML for questers">
-      YAML for questers
+<a class="md-nav__link" href="../../Learn-Beton/Getting-Started/Quick-Start-Tutorial/" title="Quick Start Tutorial">
+      Quick Start Tutorial
     </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Learn-Beton/Frequently-Asked-Questions/" title="Frequently Asked Questions">
+      Frequently Asked Questions
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Learn-Beton/Tips-and-tricks/" title="Tips and tricks">
+      Tips and tricks
+    </a>
 </li>
 </ul>
 </nav>
@@ -360,16 +355,21 @@
         Developer Documentation
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Contributing-Guidelines/" title="Contributing Guidelines">
+      Contributing Guidelines
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-        Info for developers
+        API
         <span class="md-nav__icon md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
 </span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Info for developers">
-      Info for developers
+<a class="md-nav__link md-nav__link--active" href="./" title="API">
+      API
     </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -493,22 +493,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Contributing/Docs/Setup/" title="Setup">
+<a class="md-nav__link" href="../../Contributing/Documentation/Setup/" title="Setup">
       Setup
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Contributing/Docs/Guidelines/" title="Guidelines">
+<a class="md-nav__link" href="../../Contributing/Documentation/Guidelines/" title="Guidelines">
       Guidelines
     </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Contributing/old_contributing/" title="Old">
-      Old
-    </a>
 </li>
 </ul>
 </nav>
@@ -596,19 +591,12 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../../pdf/BetonQuest.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
-<a class="md-content__button md-icon" href="https://github.com/BetonQuest/BetonQuest/edit/master/docs/Developer-Documentation/Info-for-developers.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/BetonQuest/BetonQuest/edit/master/docs/Developer-Documentation/API.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="info-for-developers">Info for developers<a class="headerlink" href="#info-for-developers" title="Permanent link">¶</a></h1>
+<h1>API</h1>
 <h2 id="accessing-the-plugin">Accessing the plugin<a class="headerlink" href="#accessing-the-plugin" title="Permanent link">¶</a></h2>
-<p>You can either add BetonQuest.jar directly to your build path or use Maven. First option if you're using Eclipse:</p>
-<ol>
-<li>Create a folder called lib in your project folder.</li>
-<li>Put BetonQuest.jar in this folder.</li>
-<li>Refresh your project in Eclipse.</li>
-<li>In Eclipse Project Explorer right click on BetonQuest.jar and select <code>Build Path -&gt; Add to Build Path</code>.</li>
-</ol>
-<p>And if you're using Maven simply add this (temporary repo) to your <em>pom.xml</em>:</p>
+<p>Add this to your pom.yml.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;repositories&gt;</span>
     <span class="nt">&lt;repository&gt;</span>
         <span class="nt">&lt;id&gt;</span>betonquest-repo<span class="nt">&lt;/id&gt;</span>
@@ -624,8 +612,6 @@
     <span class="nt">&lt;/dependency&gt;</span>
 <span class="nt">&lt;/dependencies&gt;</span>
 </code></pre></div>
-<p>The version you need to choose must be 1.12.0 or newer. If you want to use dev builds use <code>X.X.X-SNAPSHOT</code>.
-Check amberproject.net:8082/repository/AmberProject/ if you are not sure</p>
 <h2 id="writing-events">Writing events<a class="headerlink" href="#writing-events" title="Permanent link">¶</a></h2>
 <p>Writing events is the easiest. You need to create a class extending <code>QuestEvent</code> for each new event. The constructor must take one argument, an <code>Instruction</code> object. In the constructor you must extract all information from the instruction, for example skill names, locations etc. The description of the <code>Instruction</code> class is down below. Don't worry about checking event conditions, these are handled by the rest of BetonQuest's logic.</p>
 <p>Events are not bound to any player so firing it is done through <code>fire(String playerID)</code> method. You have to override it with your code responsible for doing stuff your event should do. Here you should use data previously parsed by the constructor. Don't access <code>Instruction</code> object here, it will lower the performance. You can convert <code>playerID</code> to <code>Player</code> object using the <code>PlayerConverter</code> class (it's a relict of times when both UUIDs and names could be used in Bukkit to identify players).</p>
@@ -678,7 +664,7 @@ Check amberproject.net:8082/repository/AmberProject/ if you are not sure</p>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1596475744000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1596492900000" locale="en"></span>
 </small>
 </div>
 </article>
@@ -688,7 +674,7 @@ Check amberproject.net:8082/repository/AmberProject/ if you are not sure</p>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../User-Documentation/CHANGELOG/" rel="prev" title="Changelog">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../Contributing-Guidelines/" rel="prev" title="Contributing Guidelines">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -697,7 +683,7 @@ Check amberproject.net:8082/repository/AmberProject/ if you are not sure</p>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Changelog
+                Contributing Guidelines
               </div>
 </div>
 </a>
