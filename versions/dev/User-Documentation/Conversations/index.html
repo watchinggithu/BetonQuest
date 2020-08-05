@@ -8,10 +8,10 @@
 <link href="https://betonquest.pl/User-Documentation/Conversations/" rel="canonical"/>
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.3.2" name="generator"/>
-<title>Conversations - BetonQuest - 1.12.0-DEV-128</title>
-<link href="../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.3" name="generator"/>
+<title>Conversations - BetonQuest - 1.12.0-DEV-129</title>
+<link href="../../assets/stylesheets/main.947af8d5.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.7f672a1f.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -19,7 +19,8 @@
 <link href="../../webCode/css/mkpdf.css" rel="stylesheet"/>
 <link href="../../webCode/css/version_select.css" rel="stylesheet"/>
 <link href="../../webCode/css/superFences.css" rel="stylesheet"/>
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<link href="../../webCode/css/centered.css" rel="stylesheet"/>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
@@ -35,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -44,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-128
+            BetonQuest - 1.12.0-DEV-129
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -132,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-128
+    BetonQuest - 1.12.0-DEV-129
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -545,7 +546,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1>Conversations</h1>
-<h2 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h2>
+<h2 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">🔗</a></h2>
 <p>Each conversation must define name of the NPC 
 (some conversations can be not bound to any NPC, so it’s important to specify it even though an NPC will have a name) and his initial options.
 <div class="highlight"><pre><span></span><code><span class="nt">quester</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -592,16 +593,16 @@
 <p>When an NPC wants to say something he will check conditions for the first option (in this case <code>option1</code>). If they are met, he will choose it. Otherwise, he will skip to next option (note: conversation ends when there are no options left to choose). After choosing an option NPC will execute any events defined in it, say it, and then the player will see options defined in <code>player_options</code> branch to which <code>pointers</code> setting points, in this case <code>reply1</code> and <code>reply2</code>. If the conditions for the player option are not met, the option is simply not displayed, similar to texts from NPC. Player will choose option he wants, and it will point back to other NPC text, which points to next player options and so on.</p>
 <p>If there are no possible options for player or NPC (either from not meeting any conditions or being not defined) the conversations ends. If the conversation ends unexpectedly, check the console - it could be an error in the configuration.</p>
 <p>This can and will be a little confusing, so you should name your options, conditions and events in a way which you will understand in the future. Don't worry though, if you make some mistake in configuration, the plugin will tell you this in console when testing a conversation. Also, study the default conversation included with the plugin to fully understand how powerful this system can be.</p>
-<h2 id="cross-conversation-pointers">Cross-conversation pointers<a class="headerlink" href="#cross-conversation-pointers" title="Permanent link">¶</a></h2>
+<h2 id="cross-conversation-pointers">Cross-conversation pointers<a class="headerlink" href="#cross-conversation-pointers" title="Permanent link">🔗</a></h2>
 <p>If you want to create a conversation with multiple NPCs at once or split a huge conversation into smaller, more focused files, you can point to NPC options in other conversation. Just type the pointer as <code>conversation.npc_option</code>.</p>
 <p>Keep in mind that you can only cross-point to NPC options. It means that you can use those pointers only in <code>first</code> starting options and in all player options. Using them in NPC options will throw errors.</p>
-<h2 id="conversation-variables">Conversation variables<a class="headerlink" href="#conversation-variables" title="Permanent link">¶</a></h2>
+<h2 id="conversation-variables">Conversation variables<a class="headerlink" href="#conversation-variables" title="Permanent link">🔗</a></h2>
 <p>You can use variables in the conversations. They will be resolved and displayed to the player when he starts a conversation. A variable generally looks like that: <code>%type.optional.arguments%</code>. Type is a mandatory argument, it defines what kind of variable it is. Optional arguments depend on the type of the variable, i.e. <code>%npc%</code> does not have any additional arguments, but <code>%player%</code> can also have <code>display</code> (it will look like that: <code>%player.display%</code>). You can find a list of all available variable types in the "Variables List" chapter.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you use a variable incorrectly (for example trying to get a property of an objective which isn't active for the player, or using %npc% in <code>message</code> event), the variable will be replaced with empty string ("").</p>
 </div>
-<h2 id="translations">Translations<a class="headerlink" href="#translations" title="Permanent link">¶</a></h2>
+<h2 id="translations">Translations<a class="headerlink" href="#translations" title="Permanent link">🔗</a></h2>
 <p>As you can see in default conversation, there are additional messages in other languages. That's because you can translate your conversations into multiple languages. The players will be albe to choose their preferred one with <strong>/questlang</strong> command. You can translate every NPC/player option and quester's name. You do this like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">quester</span><span class="p">:</span>
   <span class="nt">en</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Innkeeper</span>
@@ -610,12 +611,12 @@
 </code></pre></div>
 <p>As said before, the same rule applies to all options and quester's name. The player can choose only from languages present in <em>messages.yml</em>, and if there will be no translation to this language in the conversation, the plugin will fall back to the default language, as defined in <em>config.yml</em>. If that one is not defined, there will be an error.</p>
 <p>You can also translate journal entries, quest cancelers and <code>message</code> events, more about that later.</p>
-<h2 id="conversation-displaying">Conversation displaying<a class="headerlink" href="#conversation-displaying" title="Permanent link">¶</a></h2>
+<h2 id="conversation-displaying">Conversation displaying<a class="headerlink" href="#conversation-displaying" title="Permanent link">🔗</a></h2>
 <p>By default BetonQuest uses the most native and safe way of displaying a conversation, which is the Minecraft chat. You choose the option by typing their number in. You can however change it with <code>default_conversation_IO</code> option in <em>config.yml</em> file. Default value is <code>simple</code>. By changing it to <code>tellraw</code> you will add a possibility to click on options. Keep in mind that if the chat is quickly flowing, players will sometimes "miss" an option and click another one. There is a display type that doesn't suffer from this problem at all, it's called <code>chest</code>. It will display the conversation in an inventory GUI, where the NPC's text and options will be shown as item lore. Alternatively use <code>slowtellraw</code> which provides the npc responses line by line delayed by 0.5 seconds. If you have <code>protocollib</code> then you can use <code>menu</code>.</p>
 <p>You can control the colors of conversation elements in the <em>config.yml</em> file, in <code>conversation_colors</code> section. Here you must use names of the colors.</p>
 <p>If you're using the <code>chest</code> display method you can change the option's item to something else than Ender Pearl by adding a prefix to that option's text. The prefix is a name of the material (like in <em>items.yml</em>) inside curly brackets, with optional damage value after a colon. Example of such option text: <code>{diamond_sword}I want to start a quest!</code> or <code>{wool:10}Purple!</code></p>
 <p>In case you want to use a different type of conversation display for a specific conversation you can add <code>conversationIO: &lt;type&gt;</code> setting to the conversation file at the top of the YAML hierarchy, which is the same level as <code>quester</code> or <code>first</code> options).</p>
-<h2 id="advanced-extends">Advanced: Extends<a class="headerlink" href="#advanced-extends" title="Permanent link">¶</a></h2>
+<h2 id="advanced-extends">Advanced: Extends<a class="headerlink" href="#advanced-extends" title="Permanent link">🔗</a></h2>
 <p>Conversation also supports the concept of inheritance. Any option can include the key <code>extends</code> with a comma delimited list of other options of the same time. The first option that does not have any false conditions will have it's text, pointers and events merged with the extending option. The extended option may itself extend other options. Infinite loops are detected.</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">NPC_options</span><span class="p">:</span>
 
@@ -640,14 +641,14 @@
    <span class="nt">pointers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">i_have_questions, bye</span>
 </code></pre></div>
 In the above example, the option <em>start</em> is extended by both <em>tonight</em> and <em>today</em>, both of whom are extended by <em>main_menu</em>. As <em>tonight</em> has a false condition the <em>today</em> option will win. The <em>start</em> option will have the pointers in main_menu added to it just as if they were defined directly in it and the text will be joined together from <em>today</em>. If you structure your conversation correctly you can make use of this to minimize duplication.</p>
-<h2 id="chat-interceptors">Chat Interceptors<a class="headerlink" href="#chat-interceptors" title="Permanent link">¶</a></h2>
+<h2 id="chat-interceptors">Chat Interceptors<a class="headerlink" href="#chat-interceptors" title="Permanent link">🔗</a></h2>
 <p>During chat it can be distracting when messages from other players or system message interfere with the dialogue. A chat interceptor provides a method of intercepting these message and then playing them back later.</p>
 <p>A default chat interceptor is specified in <code>config.yml</code> by setting <code>default_interceptor</code>. This defaults to <code>simple</code> for the simple interceptor. The chat interceptor can also be set per conversation though the use of <code>interceptor</code> key in the conversation. If you have <code>protocollib</code> installed then you can use the <code>packet</code> interceptor that should intercept anything. </p>
 <hr/>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1596637266000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1596637859000" locale="en"></span>
 </small>
 </div>
 </article>
@@ -715,14 +716,14 @@ In the above example, the option <em>start</em> is extended by both <em>tonight<
 </div>
 </footer>
 </div>
-<script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
+<script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: "../..",
           features: ["tabs", "instant"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.8e2cddea.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

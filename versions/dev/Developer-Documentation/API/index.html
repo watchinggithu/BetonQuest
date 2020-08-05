@@ -8,10 +8,10 @@
 <link href="https://betonquest.pl/Developer-Documentation/API/" rel="canonical"/>
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.3.2" name="generator"/>
-<title>API - BetonQuest - 1.12.0-DEV-128</title>
-<link href="../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.3" name="generator"/>
+<title>API - BetonQuest - 1.12.0-DEV-129</title>
+<link href="../../assets/stylesheets/main.947af8d5.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.7f672a1f.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -19,7 +19,8 @@
 <link href="../../webCode/css/mkpdf.css" rel="stylesheet"/>
 <link href="../../webCode/css/version_select.css" rel="stylesheet"/>
 <link href="../../webCode/css/superFences.css" rel="stylesheet"/>
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<link href="../../webCode/css/centered.css" rel="stylesheet"/>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
@@ -35,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -44,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-128
+            BetonQuest - 1.12.0-DEV-129
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -132,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-128
+    BetonQuest - 1.12.0-DEV-129
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -595,7 +596,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1>API</h1>
-<h2 id="accessing-the-plugin">Accessing the plugin<a class="headerlink" href="#accessing-the-plugin" title="Permanent link">¶</a></h2>
+<h2 id="accessing-the-plugin">Accessing the plugin<a class="headerlink" href="#accessing-the-plugin" title="Permanent link">🔗</a></h2>
 <p>Add this to your pom.yml.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;repositories&gt;</span>
     <span class="nt">&lt;repository&gt;</span>
@@ -612,16 +613,16 @@
     <span class="nt">&lt;/dependency&gt;</span>
 <span class="nt">&lt;/dependencies&gt;</span>
 </code></pre></div>
-<h2 id="writing-events">Writing events<a class="headerlink" href="#writing-events" title="Permanent link">¶</a></h2>
+<h2 id="writing-events">Writing events<a class="headerlink" href="#writing-events" title="Permanent link">🔗</a></h2>
 <p>Writing events is the easiest. You need to create a class extending <code>QuestEvent</code> for each new event. The constructor must take one argument, an <code>Instruction</code> object. In the constructor you must extract all information from the instruction, for example skill names, locations etc. The description of the <code>Instruction</code> class is down below. Don't worry about checking event conditions, these are handled by the rest of BetonQuest's logic.</p>
 <p>Events are not bound to any player so firing it is done through <code>fire(String playerID)</code> method. You have to override it with your code responsible for doing stuff your event should do. Here you should use data previously parsed by the constructor. Don't access <code>Instruction</code> object here, it will lower the performance. You can convert <code>playerID</code> to <code>Player</code> object using the <code>PlayerConverter</code> class (it's a relict of times when both UUIDs and names could be used in Bukkit to identify players).</p>
 <p>If you want your event to be <em>persistent</em>, you need to set <code>super.persistent</code> variable to <code>true</code> in the constructor. This will make BetonQuest run this event even if the <code>playerID</code> points to an offline player, so prepare your code for that.</p>
 <p>If you want your event to be <em>static</em>, you need to set <code>super.staticness</code> variable to <code>true</code> in the constructor. This will allow BetonQuest to run this event with <code>playerID</code> set to <code>null</code>, so prepare your code for that.</p>
 <p>When you'll finish your class you need to invoke <code>registerEvents(String name, Class&lt;? extends QuestEvent&gt; class)</code> from BetonQuest instance (which you can get using <code>BetonQuest.getInstance()</code> static method). The name for your event will be used in instruction strings (such as "journal" for journal event). The class argument is the <code>Class</code> object of your event. You can get it using <code>YourEvent.class</code>. That's it, you created an event. Don't forget to check it for bugs!</p>
-<h2 id="writing-conditions">Writing conditions<a class="headerlink" href="#writing-conditions" title="Permanent link">¶</a></h2>
+<h2 id="writing-conditions">Writing conditions<a class="headerlink" href="#writing-conditions" title="Permanent link">🔗</a></h2>
 <p>Writing conditions is easy too. They must extend <code>Condition</code> and override <code>execute(String playerID)</code> method, which should return <code>true</code> or <code>false</code>, depending on if the condition was met. You register them using <code>registerConditions(String name, Class&lt;? extends Condition)</code> method from BetonQuest instance as well. The rest is almost the same, you're defining the constructor which will parse the <code>Instruction</code> object and overriding <code>execute(String playerID)</code> method to check if the player meets the condition. Don't worry about inverting it, as it's automatically done by BetonQuest.</p>
 <p>Conditions are always getting an online player in the <code>execute(String playerID)</code> method, so you don't need to check that manually.</p>
-<h2 id="writing-objectives">Writing objectives<a class="headerlink" href="#writing-objectives" title="Permanent link">¶</a></h2>
+<h2 id="writing-objectives">Writing objectives<a class="headerlink" href="#writing-objectives" title="Permanent link">🔗</a></h2>
 <p>Objectives are more complicated because they use event handlers and they must store players' data. They extend <code>Objective</code> class. As always, you need to extract all data from supplied <code>Instruction</code> object in the constructor. Don't register listeners in the constructor!</p>
 <p>If your objective handles changing data (like amount of mobs left to kill) you should create a class extending <code>ObjectiveData</code>. For example <code>block</code> objective does need to store amount of blocks left to place/break, and it does that using "BlockData" class. In the constructor it receives three strings: data string, ID of the player and ID of the objective. The latter two are used by BetonQuest to correctly save and load the former one from the database.</p>
 <p>The data string should contains all the information you need in your objective. You must write a parser which will extract the information, methods used in the objective to alter the information, and override the <code>toString()</code> method in so it returns data string in the format parsable by your parser. Everytime the data in your object changes (like when killing a mob), you need to call <code>update()</code> method. It will save the data to the database.</p>
@@ -631,25 +632,25 @@
 <p><code>start()</code> and <code>stop()</code> methods must start objective's listeners and stop them accordingly. It's because the plugin turns the objective's listeners off if there are no players having it active. Here usually you will register/unregister listeners, but some objectives may be different. For example <code>delay</code> objective starts and cancels a runnable, instead of using listeners.</p>
 <p>If your objective has some properties (used in variables) you should override the <code>String getProperty(String property, String playerID)</code> method. At runtime, if anyone uses <code>%objective.yourObjective.theProperty%</code> variable, BetonQuest will call that method with <code>theProperty</code> keyword as the first argument. Using it you should parse the data of the objective and return it as a String. If the supplied property name is incorrect or there was an error during getting the value, return an empty String and optionally log an error (<code>Debug.error(String message)</code>).</p>
 <p>Objectives are registered the same way as conditions and events, using <code>registerObjective(String name, Class&lt;? extends Objective&gt;)</code> method.</p>
-<h2 id="reading-instruction-object">Reading <code>Instruction</code> object<a class="headerlink" href="#reading-instruction-object" title="Permanent link">¶</a></h2>
+<h2 id="reading-instruction-object">Reading <code>Instruction</code> object<a class="headerlink" href="#reading-instruction-object" title="Permanent link">🔗</a></h2>
 <p>The <code>Instruction</code> object parses the instruction string defined by the user and splits it into arguments. You can ask it for required arguments one by one with <code>next()</code> method or a parser method like <code>getQuestItem()</code>. Required arguments are the ones specified at the very beginning of an instruction string, for example <code>add someTag</code> in <code>tag</code> event. It will automaticly throw <code>InstructionParseException</code> for you if it encounters an error, for example when there were no more arguments in user's instruction or it can't parse the argument to the type you asked for.</p>
 <p>You can also ask for optional arguments: if the instruction string contains argument <code>arg:something</code> and you ask for optional <code>arg</code>, it will give you <code>something</code>. If there is no optional argument, it will return <code>null</code>. Don't worry about passing that <code>null</code> to parser methods like <code>getLocation(String)</code>, they won't throw an error, they'll simply return that <code>null</code>.</p>
 <p>Parser methods are there for your convenience. You could write a location parser for yourself, but there's no need for that, you can just use <code>getLocation()</code> or <code>getLocation(String)</code> method and receive <code>LocationData</code> object. The former method is simply <code>getLocation(next())</code>.</p>
 <p>If your instruction is more complicated and <code>Instruction</code> class doesn't provide necessary methods, you can still parse the instruction string manually. You can get it with <code>getInstruction()</code> method. Just remember to throw <code>InstructionParseException</code> when the instruction supplied by the user is incorrect. BetonQuest will catch them and display a message in the console.</p>
-<h2 id="writing-variables">Writing variables<a class="headerlink" href="#writing-variables" title="Permanent link">¶</a></h2>
+<h2 id="writing-variables">Writing variables<a class="headerlink" href="#writing-variables" title="Permanent link">🔗</a></h2>
 <p>All variables need to extend <code>Variable</code> class. In the constructor you must parse the instruction and extract all information about your variable's behavior. Then you have to override the <code>String getValue(String playerID)</code> method. It should return the value of the variable for the supplied player. If it's impossible, it should return an empty String. Registering variables is done via <code>BetonQuest.registerVariable(String name, Class&lt;? extends Variable&gt; variable)</code> method.</p>
-<h2 id="firing-events">Firing events<a class="headerlink" href="#firing-events" title="Permanent link">¶</a></h2>
+<h2 id="firing-events">Firing events<a class="headerlink" href="#firing-events" title="Permanent link">🔗</a></h2>
 <p>The plugin has a static method for firing events - <code>event(String playerID, EventID eventID)</code>. First parameter is ID of the player. Second one represents ID of the event. To get it, simply create an instance of the <code>EventID</code> class. You can't fire an event directly using an instruction string.</p>
-<h2 id="checking-conditions">Checking conditions<a class="headerlink" href="#checking-conditions" title="Permanent link">¶</a></h2>
+<h2 id="checking-conditions">Checking conditions<a class="headerlink" href="#checking-conditions" title="Permanent link">🔗</a></h2>
 <p>BetonQuest has static boolean method <code>condition(String playerID, String conditionID)</code>. It works similarly as event method described above.</p>
-<h2 id="starting-objectives">Starting objectives<a class="headerlink" href="#starting-objectives" title="Permanent link">¶</a></h2>
+<h2 id="starting-objectives">Starting objectives<a class="headerlink" href="#starting-objectives" title="Permanent link">🔗</a></h2>
 <p>The <code>newObjective(String playerID, String objectiveID)</code> method will launch the objective from start. You can however use <code>resumeObjective(String playerID, String objectiveID, String instruction)</code> to pass your own <code>ObjectiveData</code> instruction to the objective. It will not be saved to the database, because it is assumed that the objective has just been loaded from it and it exists there without any change. You should save it manually.</p>
-<h2 id="creating-additional-conversation-inputoutput-methods">Creating additional conversation input/output methods<a class="headerlink" href="#creating-additional-conversation-inputoutput-methods" title="Permanent link">¶</a></h2>
+<h2 id="creating-additional-conversation-inputoutput-methods">Creating additional conversation input/output methods<a class="headerlink" href="#creating-additional-conversation-inputoutput-methods" title="Permanent link">🔗</a></h2>
 <p>In order to register an object as the conversation input/output it needs to implement <code>ConversationIO</code> interface. The constructor will receive three arguments: Conversation object, playerID String and NPC name String. It needs to parse the required data here and register all needed listeners. The <code>setResponse(String response)</code> method will receive NPC's text from the conversation. The <code>addOption(String option)</code> method will be called by the conversation for each reply option for this NPC text. The object must store all this data and when <code>display()</code> is called, it must use it to display the player the output. When it detects that the player chose an answer, it should pass it to the conversation using <code>Conversation.passPlayerAnswer(int number)</code> method. The integer is the number of the answer, starting at 1. <code>clear()</code> method will be called at the beginning of the new conversation cycle. It should clear all the previous options, so they do not overlap. <code>end()</code> method will be called when the conversation ends and it should unregister all listeners. You can also call that message when you detect that the player forced conversation ending (for example by moving away from the NPC). Remember to notify the conversation about that using <code>Conversation.end()</code>.</p>
 <p>Registering the conversation inputs/outputs is done in the same way as objectives, events and conditions, through <code>BetonQuest.registerConversationIO(String name, Class&lt;? extends ConversationIO&gt;)</code> method.</p>
-<h2 id="listening-to-betonquest-bukkit-events">Listening to BetonQuest (Bukkit) events<a class="headerlink" href="#listening-to-betonquest-bukkit-events" title="Permanent link">¶</a></h2>
+<h2 id="listening-to-betonquest-bukkit-events">Listening to BetonQuest (Bukkit) events<a class="headerlink" href="#listening-to-betonquest-bukkit-events" title="Permanent link">🔗</a></h2>
 <p>BetonQuest calls Bukkit events on a few occasions: when a conversation is started, finished and when an option is selected. You can find these events in <code>pl.betoncraft.betonquest.api</code> package and use them in your plugins. If you need any additional events just open and issue on GitHub or send me a pull request.</p>
-<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">¶</a></h2>
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">🔗</a></h2>
 <p>You can debug your code using <code>LogUtils</code> class by simply call <code>LogUtils.getlogger().log(..)</code> to log something.</p>
 <p>We use the following levels for this aspects:
 - <code>SEVER</code> - Anything happen, that breaks the plugin, or a main function of the plugin
@@ -664,7 +665,7 @@
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1596637266000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1596637859000" locale="en"></span>
 </small>
 </div>
 </article>
@@ -732,14 +733,14 @@
 </div>
 </footer>
 </div>
-<script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
+<script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: "../..",
           features: ["tabs", "instant"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.8e2cddea.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

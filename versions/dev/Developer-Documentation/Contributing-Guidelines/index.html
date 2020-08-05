@@ -8,10 +8,10 @@
 <link href="https://betonquest.pl/Developer-Documentation/Contributing-Guidelines/" rel="canonical"/>
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.3.2" name="generator"/>
-<title>Contributing Guidelines - BetonQuest - 1.12.0-DEV-128</title>
-<link href="../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.3" name="generator"/>
+<title>Contributing Guidelines - BetonQuest - 1.12.0-DEV-129</title>
+<link href="../../assets/stylesheets/main.947af8d5.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.7f672a1f.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -19,7 +19,8 @@
 <link href="../../webCode/css/mkpdf.css" rel="stylesheet"/>
 <link href="../../webCode/css/version_select.css" rel="stylesheet"/>
 <link href="../../webCode/css/superFences.css" rel="stylesheet"/>
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<link href="../../webCode/css/centered.css" rel="stylesheet"/>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
@@ -35,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -44,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-128
+            BetonQuest - 1.12.0-DEV-129
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -132,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-128
+    BetonQuest - 1.12.0-DEV-129
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -580,15 +581,15 @@
 <a class="md-content__button md-icon" href="https://github.com/BetonQuest/BetonQuest/edit/master/docs/Developer-Documentation/Contributing-Guidelines.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="contributing-guidelines">Contributing Guidelines<a class="headerlink" href="#contributing-guidelines" title="Permanent link">¶</a></h1>
+<h1 id="contributing-guidelines">Contributing Guidelines<a class="headerlink" href="#contributing-guidelines" title="Permanent link">🔗</a></h1>
 <p>The BetonQuest organisation recommends <a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ Community Edition</a> as the preferred IDE.
 This makes it possible to ship a complete project setup that ensures a consistent code quality and style.
 The project has been setup using maven and will build immediately on your device without any extra work (like manually adding dependencies).</p>
 <p>Everyone that wants to use another IDE can do so but has to ensure that their code meets the guidelines.
 <strong>Notice that everything that is prescribed in the Coding Guidelines will be checked by the Build-Pipeline.
 The Build-Pipeline will not accept commits that fail to respect the guidelines.</strong></p>
-<h2 id="walkthrough-of-the-guidelines">Walkthrough of the Guidelines<a class="headerlink" href="#walkthrough-of-the-guidelines" title="Permanent link">¶</a></h2>
-<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">¶</a></h3>
+<h2 id="walkthrough-of-the-guidelines">Walkthrough of the Guidelines<a class="headerlink" href="#walkthrough-of-the-guidelines" title="Permanent link">🔗</a></h2>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">🔗</a></h3>
 <p>The first thing you should do is to clone the project from our GitHub repository:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/BetonQuest/BetonQuest.git
 </code></pre></div>
@@ -599,35 +600,35 @@ The Build-Pipeline will not accept commits that fail to respect the guidelines.<
 MacOS &amp; Linux:
 <div class="highlight"><pre><span></span><code>git config --global core.autocrlf input
 </code></pre></div></p>
-<h3 id="get-ready-to-create-a-pull-request">Get ready to create a Pull Request!<a class="headerlink" href="#get-ready-to-create-a-pull-request" title="Permanent link">¶</a></h3>
-<h4 id="test-your-changes">Test your changes!<a class="headerlink" href="#test-your-changes" title="Permanent link">¶</a></h4>
+<h3 id="get-ready-to-create-a-pull-request">Get ready to create a Pull Request!<a class="headerlink" href="#get-ready-to-create-a-pull-request" title="Permanent link">🔗</a></h3>
+<h4 id="test-your-changes">Test your changes!<a class="headerlink" href="#test-your-changes" title="Permanent link">🔗</a></h4>
 <p>Please ensure your changes actually work and haven't introduced any bugs.
 Therefore, you should compile the plugin and run it on a local 1.13+ test server.
 Please install any related dependencies! If you changed code related to MySQL then setup a MySQL on your machine and test if BetonQuest still saves its data correctly. </p>
-<h4 id="does-your-change-require-updates-to-users-configs">Does your change require updates to users configs?<a class="headerlink" href="#does-your-change-require-updates-to-users-configs" title="Permanent link">¶</a></h4>
+<h4 id="does-your-change-require-updates-to-users-configs">Does your change require updates to users configs?<a class="headerlink" href="#does-your-change-require-updates-to-users-configs" title="Permanent link">🔗</a></h4>
 <p>This would be the case if you removed arguments or renamed e.g. an event.
 You then have to write code to update any related configs to your new syntax.
 Search for the ConfigUpdater class in the project to see how its done.</p>
-<h4 id="validate-your-codes-quality">Validate your codes quality<a class="headerlink" href="#validate-your-codes-quality" title="Permanent link">¶</a></h4>
+<h4 id="validate-your-codes-quality">Validate your codes quality<a class="headerlink" href="#validate-your-codes-quality" title="Permanent link">🔗</a></h4>
 <p>Please check you code with PMD. IntelliJ's plugin store offer the <em>QAPlug</em> &amp; <em>QAPlug - PMD</em> plugins for free.
 We provide our own ruleset for PMD (<em>config/pmd-ruleset.xml</em>) that needs to be imported in QAPlug. 
 To do so open IntelliJ's settings and navigate to  QAPlug -&gt; Coding Rules. Click the plus and select Project Profile.
 Now you just need to tick "Import Profile" to add our ruleset (<em>config/pmd-ruleset.xml</em>).</p>
 <p>Please also remove any TODO's along with commented out code.</p>
 <p>You can run <code>mvn verify</code> locally to ensure that you meet (nearly) all conditions before creating a PR.</p>
-<h4 id="update-the-changelog">Update the Changelog<a class="headerlink" href="#update-the-changelog" title="Permanent link">¶</a></h4>
+<h4 id="update-the-changelog">Update the Changelog<a class="headerlink" href="#update-the-changelog" title="Permanent link">🔗</a></h4>
 <p>You need to add your changes to the <em>Changelog.md</em> file that can be found in the projects root folder.</p>
-<h4 id="update-the-documentation">Update the documentation<a class="headerlink" href="#update-the-documentation" title="Permanent link">¶</a></h4>
+<h4 id="update-the-documentation">Update the documentation<a class="headerlink" href="#update-the-documentation" title="Permanent link">🔗</a></h4>
 <p>You also need to document changes or additions to the plugins feature set in our documentation. Please notice that the documentation 
 also has <a href="../../Contributing/Documentation/Guidelines/">it's own guidelines</a>.</p>
-<h4 id="clean-the-commit-history">Clean the commit history<a class="headerlink" href="#clean-the-commit-history" title="Permanent link">¶</a></h4>
+<h4 id="clean-the-commit-history">Clean the commit history<a class="headerlink" href="#clean-the-commit-history" title="Permanent link">🔗</a></h4>
 <p>You need to have a clean commit history in order to get you PR accepted.
 Check out this <a href="https://medium.com/@catalinaturlea/clean-git-history-a-step-by-step-guide-eefc0ad8696d" target="_blank">guide</a> if you don't know how to do so.</p>
 <hr/>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1596637266000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1596637859000" locale="en"></span>
 </small>
 </div>
 </article>
@@ -695,14 +696,14 @@ Check out this <a href="https://medium.com/@catalinaturlea/clean-git-history-a-s
 </div>
 </footer>
 </div>
-<script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
+<script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: "../..",
           features: ["tabs", "instant"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.8e2cddea.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

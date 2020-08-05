@@ -8,10 +8,10 @@
 <link href="https://betonquest.pl/Learn-Beton/Getting-Started/Quick-Start-Tutorial/" rel="canonical"/>
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../../media/design/favicon.ico" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.3.2" name="generator"/>
-<title>Quick Start Tutorial - BetonQuest - 1.12.0-DEV-128</title>
-<link href="../../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.3" name="generator"/>
+<title>Quick Start Tutorial - BetonQuest - 1.12.0-DEV-129</title>
+<link href="../../../assets/stylesheets/main.947af8d5.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.7f672a1f.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -19,7 +19,8 @@
 <link href="../../../webCode/css/mkpdf.css" rel="stylesheet"/>
 <link href="../../../webCode/css/version_select.css" rel="stylesheet"/>
 <link href="../../../webCode/css/superFences.css" rel="stylesheet"/>
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<link href="../../../webCode/css/centered.css" rel="stylesheet"/>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-164568470-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
@@ -35,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -44,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-128
+            BetonQuest - 1.12.0-DEV-129
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -132,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-128" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-128">
+<a aria-label="BetonQuest - 1.12.0-DEV-129" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-129">
 <img alt="logo" src="../../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-128
+    BetonQuest - 1.12.0-DEV-129
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -554,7 +555,7 @@
 </a>
 <h1>Quick Start Tutorial</h1>
 <p>This section will teach you the very basics of BetonQuest.</p>
-<h2 id="checking-out-the-default-example-quest">Checking out the "default" example quest.<a class="headerlink" href="#checking-out-the-default-example-quest" title="Permanent link">¶</a></h2>
+<h2 id="checking-out-the-default-example-quest">Checking out the "default" example quest.<a class="headerlink" href="#checking-out-the-default-example-quest" title="Permanent link">🔗</a></h2>
 <p>Let's start by checking out the build in example quest. You can find it in the BetonQuest directory that has been generated in your plugins folder.
 The folder you are looking for is named "<em>default</em>".</p>
 <p>Open it up and find a file called <em>main.yml</em>. It contains a lot of options, but you only need to look at this section:
@@ -570,12 +571,12 @@ Execute <strong>/q reload</strong> and right-click the NPC.</p>
 He will tell you to cut some trees. If you want, type <strong>/journal</strong> to get the journal and see a new entry. Now, don't try to place any wood blocks.
 BetonQuest will detect that and increase the number of blocks to destroy. Just go and find some trees that you can cut down. 
 Now you can return to Innkeeper and give him the wood. You will receive the reward.</p>
-<h2 id="using-events-and-conditions">Using events and conditions<a class="headerlink" href="#using-events-and-conditions" title="Permanent link">¶</a></h2>
+<h2 id="using-events-and-conditions">Using events and conditions<a class="headerlink" href="#using-events-and-conditions" title="Permanent link">🔗</a></h2>
 <p>Now that you know how a (very) simple quest looks like time to start learning how to write something similar. 
 Let's start with events. We won't do conversations just now, since they heavily use events and conditions, 
 so you need to know them first. You can read complete reference to events in the <a href="../../../User-Documentation/Reference/#events">Reference chapter</a>.
 Do that now or just continue with this tutorial.</p>
-<h3 id="events">Events<a class="headerlink" href="#events" title="Permanent link">¶</a></h3>
+<h3 id="events">Events<a class="headerlink" href="#events" title="Permanent link">🔗</a></h3>
 <p>Let's just open <em>events.yml</em> file inside the <em>default</em> package. At the end add a new line:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">mega</span><span class="p">:</span> <span class="s">"message</span><span class="nv"> </span><span class="s">Hello</span><span class="nv"> </span><span class="s">world!"</span>
 </code></pre></div>
@@ -597,7 +598,7 @@ current world's name. Save the file, reload the plugin (<strong>/q reload</stron
 It should teleport you to the location you have specified.</p>
 <p>Congratulations, you have just created your first events. Go ahead and do some experiments with other event types. 
 You can find them in <a href="../../../User-Documentation/Events-List/">Events list</a> chapter. Once you're done let's start learning conditions.</p>
-<h3 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link">¶</a></h3>
+<h3 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link">🔗</a></h3>
 <p>Open the <em>conditions.yml</em> file and add a new line:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">mega</span><span class="p">:</span> <span class="s">"location</span><span class="nv"> </span><span class="s">100;200;300;world</span><span class="nv"> </span><span class="s">5"</span>
 </code></pre></div>
@@ -646,7 +647,7 @@ and it won't be met if he's inside. Open the <em>events.yml</em> and add an excl
 </td></tr></table>
 <p>This means "display message <code>Hello world!</code> if the <code>isAtSpawn</code> condition is <em>not met</em>". Save the file, reload the plugin and run the event
 inside and outside of the radius to see how it works.</p>
-<h2 id="basic-tags">Basic tags<a class="headerlink" href="#basic-tags" title="Permanent link">¶</a></h2>
+<h2 id="basic-tags">Basic tags<a class="headerlink" href="#basic-tags" title="Permanent link">🔗</a></h2>
 <p>Now that you know how to use events and conditions I'll show you what tags are. Create new events:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">add_beton_tag</span><span class="p">:</span> <span class="s">"tag</span><span class="nv"> </span><span class="s">add</span><span class="nv"> </span><span class="s">beton"</span>
@@ -665,7 +666,7 @@ Now run <code>del_beton_tag</code> event. Guess what, <code>default.beton</code>
 </td></tr></table>
 <p>line. As you can imagine, <code>tag</code> is the type of condition (the same as <code>tag</code> event, but these are not the same things - one is an event, the other one is a condition) and <code>beton</code> is the name of the tag. You don't have to specify <code>default.beton</code>, but you can if you want. Now save, reload and check it with a command. It should show <strong>false</strong>, since you have removed the tag with <code>del_beton_tag</code> event. Add it again with <code>add_beton_tag</code> event and check the <code>has_beton_tag</code> condition again. Now it will show <strong>true</strong>.</p>
 <p>Now you probably understand how powerful this system is. You could for example set a tag on the first time the player talks with an NPC, and if the NPC sees that tag next time they talk, he will tell something different, like "welcome back".</p>
-<h2 id="creating-objectives">Creating objectives<a class="headerlink" href="#creating-objectives" title="Permanent link">¶</a></h2>
+<h2 id="creating-objectives">Creating objectives<a class="headerlink" href="#creating-objectives" title="Permanent link">🔗</a></h2>
 <p>Time to write some objectives! Open the <em>objectives.yml</em> file and add a new line:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">kill_creepers</span><span class="p">:</span> <span class="s">"mobkill</span><span class="nv"> </span><span class="s">CREEPER</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">events:bar</span><span class="nv"> </span><span class="s">conditions:has_beton_tag"</span>
 </code></pre></div>
@@ -677,7 +678,7 @@ Now run <code>del_beton_tag</code> event. Guess what, <code>default.beton</code>
 Save it, reload the plugin and issue <strong>/q o {name} add kill_creepers</strong> command (<code>o</code> is for <code>objective</code>, <code>add</code> tells the plugin to add an objective).</p>
 <p>Now you can check if you actually have this objective with <strong>/q o {name}</strong> command, it will show you all your active objectives. It should show <code>default.kill_creepers</code>. Alright, remove (yes, remove!) the <code>beton</code> tag from you and find some Creepers to kill. Once you killes 3 of them you will notice that nothing happened. It's because <code>has_beton_tag</code> condtion is not met, so the objective does not count your progress. Now add the tag again and kill another Creepers. When the third is dead you should be teleported to the location defined in <code>bar</code> event.</p>
 <p>Congratulations, now you know how to use objectives. You should experiment with other types now, since objectives will be used very often in your quests. Once you're done check out the <em>Writing your first conversation</em> chapter to use your knowledge to write your fisrt conversation.</p>
-<h2 id="writing-your-first-conversation">Writing your first conversation<a class="headerlink" href="#writing-your-first-conversation" title="Permanent link">¶</a></h2>
+<h2 id="writing-your-first-conversation">Writing your first conversation<a class="headerlink" href="#writing-your-first-conversation" title="Permanent link">🔗</a></h2>
 <p>Now that you have seen BetonQuest in action and understood events, conditions and objectives, it's time for writing your first conversation. There's a <em>conversations</em> directory inside the default package. It contains a single file, <em>innkeeper.yml</em>. This is the conversation with Innkeeper, the one who asks you to cut some trees. Open it, we'll use that for reference. Now create a new file, let's say <em>miner.yml</em>. Now type (don't copy-paste it, you'll learn better while typing) that into the file:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -824,7 +825,7 @@ take a look at the appropriate lists (after the <em>Reference</em> chapter).</p>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1596637266000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1596637859000" locale="en"></span>
 </small>
 </div>
 </article>
@@ -892,14 +893,14 @@ take a look at the appropriate lists (after the <em>Reference</em> chapter).</p>
 </div>
 </footer>
 </div>
-<script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
+<script src="../../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: "../../..",
           features: ["tabs", "instant"],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../../assets/javascripts/worker/search.8e2cddea.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
