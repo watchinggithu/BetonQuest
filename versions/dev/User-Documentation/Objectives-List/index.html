@@ -9,7 +9,7 @@
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.3" name="generator"/>
-<title>Objectives List - BetonQuest - 1.12.0-DEV-139</title>
+<title>Objectives List - BetonQuest - 1.12.0-DEV-140</title>
 <link href="../../assets/stylesheets/main.947af8d5.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.7f672a1f.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -36,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-139" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-139">
+<a aria-label="BetonQuest - 1.12.0-DEV-140" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-140">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -45,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-139
+            BetonQuest - 1.12.0-DEV-140
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -133,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-139" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-139">
+<a aria-label="BetonQuest - 1.12.0-DEV-140" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-140">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-139
+    BetonQuest - 1.12.0-DEV-140
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -836,12 +836,23 @@
 </code></pre></div>
 </div>
 <h2 id="password-password">Password: <code>password</code><a class="headerlink" href="#password-password" title="Permanent link">🔗</a></h2>
-<p>This objective requires the player to type the password in the chat. The first argument is the password. All <code>_</code> characters are replaced with spaces. It's checked with <a href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">regular expressions</a> (if your password will be <code>^beton.*beton$</code> the objective will accept all passwords that starts and ends with <code>beton</code> word (<code>^</code> represents beginning of a string, <code>.</code> represents any character, <code>*</code> allows the previous character (in this case any) repeat any number of times, and <code>$</code> means end of the string), but you can also use something like <code>beton</code> - it will work). If you want the objective to ignore case of the letters you can add optional <code>ignoreCase</code> argument. For this to work your regular expression needs to use lower case letters. To answer, the player needs to type (in his language, configurable in <em>messages.yml</em>) <code>password: here goes player's guess</code>. If he fails, the message will not be displayed in the chat.</p>
+<p>This objective requires the player to write a certain "password" in chat. The password consits of a prefix and the actual secret word:
+Solution: The Cake is a lie!   <br/>
+^prefix   ^secret word(s)     <br/>
+All attempts of a player will be hidden from public chat.
+The prefix can also be disabled:    <br/>
+The Cake is a lie!   &lt;- This would be correct   <br/>
+The only downside of this is that all wrong attemtps will be shown in the global chat. </p>
+<p>The objective's instruction string is defined as follows:
+The first argument is the password. All <code>_</code> characters are replaced with spaces. Next follows the prefix. If no custom prefix is set BetonQuest will look up a translatable version from the <em>messages.yml</em> config. To completely disable the prefix an empty prefix is required (password:bla prefix: events:...).
+You can also add the <code>ignoreCase</code> argument if you want a passwords capitalization ignored. This is especially important for regex matching.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">password beton ignoreCase events:message,reward</span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">password beton ignoreCase prefix:secret events:message,reward</span>
 </code></pre></div>
 </div>
+<p>The correctness of the given password is validated using a popular system called 
+<a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285">regular expressions</a>. This is a little complicated and only worth the effort for experts. If you just want your players to input the exact string you defined as a password you do not need to do anything!</p>
 <h2 id="mob-kill-mobkill">Mob Kill: <code>mobkill</code><a class="headerlink" href="#mob-kill-mobkill" title="Permanent link">🔗</a></h2>
 <p>The player must kill specified amount of mobs You must specify mob type first and then amount. You can find possible mob types here: <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html">mob types</a>. Additionally you can specify names for mobs with <code>name:Uber_Zombie</code>, so only killing properly named mobs counts. All <code>_</code> are replaced with spaces, so in this example you would have to kill 5 zombies with "Uber Zombie" above their heads. You can also specify <code>notify</code> keyword to display messages to the player each time he kills a mob, optionally with the notification interval after colon. If you want to accept only mobs marked with <code>spawn</code> event, use <code>marked:</code> argument followed by the keyword used in that event.</p>
 <p>This objective also has two properties, <code>amount</code> and <code>left</code>. Amount is current amount of killed mobs, left is amount needed to complete the objective.</p>
@@ -913,7 +924,7 @@ To remove this objective use <code>objective delete</code> event - there is no o
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1597335533000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1597507865000" locale="en"></span>
 </small>
 </div>
 </article>
