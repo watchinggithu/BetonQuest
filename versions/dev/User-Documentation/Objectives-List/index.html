@@ -9,7 +9,7 @@
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.7" name="generator"/>
-<title>Objectives List - BetonQuest - 1.12.0-DEV-154</title>
+<title>Objectives List - BetonQuest - 1.12.0-DEV-155</title>
 <link href="../../assets/stylesheets/main.b8ac9624.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.28f3ef9a.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -36,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-154" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-154">
+<a aria-label="BetonQuest - 1.12.0-DEV-155" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-155">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -45,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-154
+            BetonQuest - 1.12.0-DEV-155
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -133,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-154" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-154">
+<a aria-label="BetonQuest - 1.12.0-DEV-155" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-155">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-154
+    BetonQuest - 1.12.0-DEV-155
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -848,27 +848,44 @@
 <h2 id="password-password">Password: <code>password</code><a class="headerlink" href="#password-password" title="Permanent link">🔗</a></h2>
 <p>This objective requires the player to write a certain password in chat. All attempts of a player will be hidden from public chat.
 The password consists of a prefix followed by the actual secret word:
-<pre>
-Solution: The Cake is a lie!   <br/>
+<div class="highlight"><pre><span></span><code>Solution: The Cake is a lie!     
 ^prefix   ^secret word(s)
-</pre></p>
-<p>The objective's instruction string is defined as follows:
-1. The first argument is the password, use underscore characters (<code>_</code>) instead of spaces. The password is a <a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285">regular expression</a>. They are a little complicated but worth the effort if you want more control over what exactly matches. You can try it on pages like <a href="https://regex101.com/">regex101.com</a>.
-2. The prefix can be changed:
-   The default (when no prefix is set) is the translated prefix from the <em>messages.yml</em> config in the user's language.</p>
-<p>Note that every custom prefix is suffixed with <code>:</code>, so <code>prefix:Library_password</code> will require the user to enter <code>Library password: myfancypassword</code>.</p>
-<p>To disable the prefix use an empty <code>prefix:</code> declaration, e.g. <code>password myfancypassword prefix: events:success</code>. Be aware of the side effects that come with disabling the prefix:
-   - Nothing will be hidden on failure, so tries will be visible in chat and commands will get executed!
-   - If a command was used to enter the password, the command will not be canceled on success and thus still be executed!
-   - This ensures that even if your password is <code>quest</code> you can still execute the <code>/quest</code> command. 
-3. You can also add the <code>ignoreCase</code> argument if you want a password's capitalization to be ignored. This is especially important for regex matching.
-4. If you want to trigger one or more events when the player failed to guess the password you can use the argument <code>fail</code> with a list of events (comma separated). With disabled prefix every command or chat message will trigger these events!</p>
+</code></pre></div></p>
+<p>The objective's instruction string is defined as follows:</p>
+<ol>
+<li>
+<p>The first argument is the password, use underscore characters (<code>_</code>) instead of spaces.
+   The password is a <a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285">regular expression</a>.
+   They are a little complicated but worth the effort if you want more control over what exactly matches. 
+   Websites like <a href="https://regex101.com/">regex101.com</a> help with that complexity though.
+   The offical <a href="https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/regex/Pattern.html#sum">documentation</a> for regular expressions
+   in Java might also help you.
+   If you don't want to get into them just write down the password but keep in mind that the players answer needs to be an exact match! </p>
+</li>
+<li>
+<p>The prefix can be changed: The default (when no prefix is set) is the translated prefix from the <em>messages.yml</em> config in the user's language.           <br/>
+   Note that every custom prefix is suffixed with <code>:⠀</code>, so <code>prefix:Library_password</code> will require the user to enter <code>Library password: myfancypassword</code>.   <br/>
+   To disable the prefix use an empty <code>prefix:</code> declaration, e.g. <code>password myfancypassword prefix: events:success</code>.
+   Be aware of these side effects that come with disabling the prefix:</p>
+<ul>
+<li>Nothing will be hidden on failure, so tries will be visible in chat and commands will get executed!</li>
+<li>If a command was used to enter the password, the command will not be canceled on success and thus still be executed!    </li>
+<li>This ensures that even if your password is <code>quest</code> you can still execute the <code>/quest</code> command. </li>
+</ul>
+</li>
+<li>
+<p>You can also add the <code>ignoreCase</code> argument if you want a password's capitalization to be ignored. This is especially important for regex matching.</p>
+</li>
+<li>
+<p>If you want to trigger one or more events when the player failed to guess the password you can use the argument <code>fail</code> with a list of events (comma separated).
+   With disabled prefix every command or chat message will trigger these events!</p>
+</li>
+</ol>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">password beton ignoreCase prefix:secret fail:failEvent1,failEvent2 events:message,reward</span>
 </code></pre></div>
 </div>
-<p><a href="https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/regex/Pattern.html#sum">Java's regular expression documentation</a></p>
 <h2 id="pickup-item-pickup">Pickup item: <code>pickup</code><a class="headerlink" href="#pickup-item-pickup" title="Permanent link">🔗</a></h2>
 <p>To complete this objective you need to pickup the specified amount of items. 
 The first argument must be the internal name of an item defined in <code>items.yml</code>. This can also be a comma-separated list of multiple items.
@@ -953,7 +970,7 @@ To remove this objective use <code>objective delete</code> event - there is no o
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1598188722000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1598387540000" locale="en"></span>
 </small>
 </div>
 </article>
