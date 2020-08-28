@@ -9,7 +9,7 @@
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.7" name="generator"/>
-<title>Conversations - BetonQuest - 1.12.0-DEV-161</title>
+<title>Conversations - BetonQuest - 1.12.0-DEV-162</title>
 <link href="../../assets/stylesheets/main.b8ac9624.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.28f3ef9a.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -36,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-161" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-161">
+<a aria-label="BetonQuest - 1.12.0-DEV-162" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-162">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -45,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-161
+            BetonQuest - 1.12.0-DEV-162
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -133,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-161" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-161">
+<a aria-label="BetonQuest - 1.12.0-DEV-162" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-162">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-161
+    BetonQuest - 1.12.0-DEV-162
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -357,13 +357,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#advanced-extends">
-    Advanced: Extends
+<a class="md-nav__link" href="#chat-interceptors">
+    Chat Interceptors
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chat-interceptors">
-    Chat Interceptors
+<a class="md-nav__link" href="#advanced-extends">
+    Advanced: Extends
   </a>
 </li>
 </ul>
@@ -526,13 +526,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#advanced-extends">
-    Advanced: Extends
+<a class="md-nav__link" href="#chat-interceptors">
+    Chat Interceptors
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chat-interceptors">
-    Chat Interceptors
+<a class="md-nav__link" href="#advanced-extends">
+    Advanced: Extends
   </a>
 </li>
 </ul>
@@ -616,6 +616,18 @@
 <p>You can control the colors of conversation elements in the <em>config.yml</em> file, in <code>conversation_colors</code> section. Here you must use names of the colors.</p>
 <p>If you're using the <code>chest</code> display method you can change the option's item to something else than Ender Pearl by adding a prefix to that option's text. The prefix is a name of the material (like in <em>items.yml</em>) inside curly brackets, with optional damage value after a colon. Example of such option text: <code>{diamond_sword}I want to start a quest!</code> or <code>{wool:10}Purple!</code></p>
 <p>In case you want to use a different type of conversation display for a specific conversation you can add <code>conversationIO: &lt;type&gt;</code> setting to the conversation file at the top of the YAML hierarchy, which is the same level as <code>quester</code> or <code>first</code> options).</p>
+<h2 id="chat-interceptors">Chat Interceptors<a class="headerlink" href="#chat-interceptors" title="Permanent link">🔗</a></h2>
+<p>While engaged in a conversation, it can be distracting when messages from other players or system messages interfere with the dialogue.
+A chat interceptor provides a method of intercepting those messages and then sending them after the conversation has ended.</p>
+<p>You can specify the default chat interceptor by setting <code>default_interceptor</code> inside the <code>config.yml</code>.
+Additionally, you can overwrite the default for each conversation by setting the <code>interceptor</code> key inside your conversation file.</p>
+<p>The default configuration of BetonQuest sets the <code>default_interceptor</code> option to <code>packet,simple</code>.
+This means that it first tries to use the <code>packet</code> interceptor. If that fails it falls back to using the <code>simple</code> interceptor.</p>
+<p>BetonQuest adds following interceptors: <code>simple</code>, <code>packet</code> and <code>none</code>:</p>
+<p>The <code>simple</code> interceptor works with every Spigot server but only supports very basic functionality and may not work with plugins like Herochat.</p>
+<p>The <code>packet</code> interceptor requires the ProtocolLib plugin to be installed. It will work well in any kind of situation.</p>
+<p>The <code>none</code> interceptor is an interceptor that won't intercept messages. That sounds useless until you have a conversation
+that you want to be excluded from interception. In this case you can just set <code>interceptor: none</code> inside your conversation file.</p>
 <h2 id="advanced-extends">Advanced: Extends<a class="headerlink" href="#advanced-extends" title="Permanent link">🔗</a></h2>
 <p>Conversation also supports the concept of inheritance. Any option can include the key <code>extends</code> with a comma delimited list of other options of the same time. The first option that does not have any false conditions will have it's text, pointers and events merged with the extending option. The extended option may itself extend other options. Infinite loops are detected.</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">NPC_options</span><span class="p">:</span>
@@ -641,26 +653,11 @@
    <span class="nt">pointers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">i_have_questions, bye</span>
 </code></pre></div>
 In the above example, the option <em>start</em> is extended by both <em>tonight</em> and <em>today</em>, both of whom are extended by <em>main_menu</em>. As <em>tonight</em> has a false condition the <em>today</em> option will win. The <em>start</em> option will have the pointers in main_menu added to it just as if they were defined directly in it and the text will be joined together from <em>today</em>. If you structure your conversation correctly you can make use of this to minimize duplication.</p>
-<h2 id="chat-interceptors">Chat Interceptors<a class="headerlink" href="#chat-interceptors" title="Permanent link">🔗</a></h2>
-<p>While engaged in a conversation, it can be distracting when messages from other players or system message interfere with the dialogue.
-A chat interceptor provides a method of intercepting those messages and then sending them after the conversation has ended.</p>
-<p>You can specify the default chat interceptor can setting <code>default_interceptor</code> inside the <code>config.yml</code>.
-Additionally, you can overwrite the default for each conversation by setting the <code>interceptor</code> key inside your conversation file.</p>
-<p>The default configuration of BetonQuest sets the <code>default_interceptor</code> option to <code>packet,simple</code>.
-This means that it first tries to use the <code>packet</code>interceptor.
-If that fails it falls back to using the <code>simple</code> interceptor.</p>
-<p>BetonQuest adds following interceptors: <code>simple</code>, <code>packet</code> and <code>none</code>:</p>
-<p>The <code>simple</code> interceptor works with every Spigot server but only supports very basic functionality
-and may not work with plugins like Herochat.</p>
-<p>The <code>packet</code> interceptor requires the ProtocolLib plugin to be installed. It will work well in any kind of situation.</p>
-<p>The <code>none</code> interceptor is an interceptor that won't intercept messages.
-That sounds useless until you have a conversation that you want to be excluded from interception.
-In this case you can just set <code>interceptor: none</code> inside your conversation file.</p>
 <hr/>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1598540354000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1598615062000" locale="en"></span>
 </small>
 </div>
 </article>
