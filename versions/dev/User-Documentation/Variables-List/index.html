@@ -9,7 +9,7 @@
 <meta content="Co0sh and contributors" name="author"/>
 <link href="../../media/design/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.7" name="generator"/>
-<title>Variables List - BetonQuest - 1.12.0-DEV-175</title>
+<title>Variables List - BetonQuest - 1.12.0-DEV-176</title>
 <link href="../../assets/stylesheets/main.b8ac9624.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.28f3ef9a.min.css" rel="stylesheet"/>
 <meta content="#3f51b5" name="theme-color"/>
@@ -36,7 +36,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="BetonQuest - 1.12.0-DEV-175" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-175">
+<a aria-label="BetonQuest - 1.12.0-DEV-176" class="md-header-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-176">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -45,7 +45,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            BetonQuest - 1.12.0-DEV-175
+            BetonQuest - 1.12.0-DEV-176
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -133,10 +133,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BetonQuest - 1.12.0-DEV-175" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-175">
+<a aria-label="BetonQuest - 1.12.0-DEV-176" class="md-nav__button md-logo" href="https://betonquest.pl" title="BetonQuest - 1.12.0-DEV-176">
 <img alt="logo" src="../../media/design/icon.png"/>
 </a>
-    BetonQuest - 1.12.0-DEV-175
+    BetonQuest - 1.12.0-DEV-176
   </label>
 <div class="md-nav__source">
 <a class="md-source" href="https://github.com/BetonQuest/BetonQuest/" title="Go to repository">
@@ -591,10 +591,28 @@
 <p><code>%item.stick.amount%</code></p>
 </div>
 <h2 id="location-location">Location: <code>location</code><a class="headerlink" href="#location-location" title="Permanent link">🔗</a></h2>
-<p>This variable resolves to player's current location, formatted as an absolute location format (more about it in the <em>Reference</em> chapter). The location will contain yaw and pitch. You can use it instead of coordinates as location arguments in events, conditions and objectives.</p>
+<p>This variable resolves to all aspects of the player's location. The x, y and z coordinates, the world name, the yaw and pitch (head rotation).
+There are also modes for Betons <a href="../Reference/#unified-location-formating">Unified Location Formatting</a> (ULF from now on)
+which means that this variable can also be used in events, conditions etc.
+If you just specify <code>%location%</code> the variables will resolve to a ULF with yaw and pitch.
+You can add two options to that base, one will give back parts of the ULF and the other will set to how many decimal places 
+the variable will resolve. </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><code>%location%</code></p>
+<div class="highlight"><pre><span></span><code><span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location%</span>           <span class="c1"># -&gt; 325;121;814;myWorldName;12;6</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.xyz%</span>       <span class="c1"># -&gt; 325 121 814 </span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.x%</span>         <span class="c1"># -&gt; 325</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.y%</span>         <span class="c1"># -&gt; 121</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.z%</span>         <span class="c1"># -&gt; 814</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.yaw%</span>       <span class="c1"># -&gt; 12</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.pitch%</span>     <span class="c1"># -&gt; 6</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.world%</span>     <span class="c1"># -&gt; myWorldName</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.ulfShort%</span>  <span class="c1"># -&gt; 325;121;814;myWorldName</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.ulfLong%</span>   <span class="c1"># -&gt; 325;121;814;myWorldName;12;6</span>
+
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.x.2%</span>       <span class="c1"># -&gt; 325.16</span>
+<span class="err">%</span><span class="l l-Scalar l-Scalar-Plain">location.ulfLong.5%</span> <span class="c1"># -&gt; 325.54268;121.32186;814.45824;myWorldName;12.0;6.0</span>
+</code></pre></div>
 </div>
 <h2 id="calculate-mathematical-expression-mathcalc">Calculate mathematical expression: <code>math.calc</code><a class="headerlink" href="#calculate-mathematical-expression-mathcalc" title="Permanent link">🔗</a></h2>
 <p>This variable allows you to perform a calculation based on other variables (for example point or objective variables) and resolves to the result of the specified calculation. The variable always starts with <code>math.calc:</code>, followed by the calculation which should be calculated. Supported operations are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and  <code>^</code>. You can use <code>( )</code> and <code>[ ]</code> braces and also calculate absolute values with <code>| |</code> (but don't use this in the command event as it splits the commands at every <code>|</code>). If you want to use variables in the calculation, don't put <code>%</code> around them.</p>
@@ -636,7 +654,7 @@
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="timeago" datetime="1598992539000" locale="en"></span>
+      Last update: <span class="timeago" datetime="1599342871000" locale="en"></span>
 </small>
 </div>
 </article>
